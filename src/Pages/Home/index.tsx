@@ -1,3 +1,5 @@
+import Me from '../../assets/Me.jpg'
+
 export default function Home() {
     return (
         <div>
@@ -5,7 +7,7 @@ export default function Home() {
                 <h1>
                     Quem sou
                 </h1>
-                <img alt="Me" />
+                <img src={Me} alt="Me" />
                 <p>
                     Meu nome é Bruno Serpa Pereira Carvalho, tenho 19 anos e sou Técnico em Desenvolvimento de Sistemas pela Escola Técnica Estadual Professora Ilza Nascimento Pintus. Atualmente, estou cursando o Tecnólogo em Desenvolvimento de Software Multiplataforma. Minha formação acadêmica e experiência prática construíram uma base sólida em tecnologias e metodologias modernas, com foco na criação de projetos funcionais e de alto desempenho.
                 </p>
