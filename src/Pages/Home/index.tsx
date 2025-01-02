@@ -1,11 +1,16 @@
-import Me from '../../assets/Me.jpg';
-import { Paragraph, ProfileDiv, ProfileImg, Title } from './style'
+import { Me } from '../../assets';
+import { Download, Paragraph, DivContend, ProfileImg, Title, DivPage, DivHeader, LinkHeader } from './style'
 
 export default function Home() {
     return (
-        <div>
-            <ProfileDiv>
-                <Title> Quem sou A</Title>
+        <DivPage>
+            <DivHeader>
+                <LinkHeader href='#QuemSou'>Quem sou</LinkHeader>
+                <LinkHeader href='#Curriculo'>Curriculo</LinkHeader>
+                <LinkHeader href='#Portfolio'>Portfólio</LinkHeader>
+            </DivHeader>
+            <DivContend id="QuemSou">
+                <Title>Quem sou</Title>
                 <ProfileImg src={Me} alt="Me" />
                 <Paragraph>
                     Meu nome é Bruno Serpa Pereira Carvalho, tenho 19 anos e sou Técnico em Desenvolvimento de Sistemas pela Escola Técnica Estadual Professora Ilza Nascimento Pintus. Atualmente, estou cursando o Tecnólogo em Desenvolvimento de Software Multiplataforma. Minha formação acadêmica e experiência prática construíram uma base sólida em tecnologias e metodologias modernas, com foco na criação de projetos funcionais e de alto desempenho.
@@ -16,7 +21,17 @@ export default function Home() {
                 <Paragraph>
                     Minha meta profissional é aprimorar constantemente minhas habilidades técnicas e contribuir para o desenvolvimento de projetos inovadores que agreguem valor, otimizem processos e ofereçam soluções práticas e eficazes aos usuários.
                 </Paragraph>
-            </ProfileDiv>
-        </div >
-    )
+            </DivContend>
+            <DivContend id="Curriculo">
+                <Title>Currículo</Title>
+                <Download>Download</Download>
+            </DivContend>
+            <DivContend id="Portfolio">
+                <Title>Portfólio</Title>
+                <Paragraph>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor omnis, repellendus qui alias dolores quas animi sapiente. Similique impedit ipsa consequuntur mollitia illum sit ipsam natus eaque, molestias ex molestiae!
+                </Paragraph>
+            </DivContend>
+        </DivPage>
+    );
 }
