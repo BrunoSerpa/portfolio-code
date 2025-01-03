@@ -29,7 +29,7 @@ export default function Home() {
             <DivContend id="Portfolio">
                 <Title>Portfólio</Title>
                 <Paragraph>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor omnis, repellendus qui alias dolores quas animi sapiente. Similique impedit ipsa consequuntur mollitia illum sit ipsam natus eaque, molestias ex molestiae!
+                    Este projeto foi desenvolvido utilizando React e TypeScript, com o código hospedado no Vercel e no GitHub. Durante o processo, o projeto foi inicialmente prototipado no Figma, garantindo um planejamento visual eficiente e alinhado com os objetivos. Apliquei boas práticas de programação e técnicas adquiridas ao longo da minha formação, assegurando a qualidade e a saúde do código por meio de análises realizadas com o SonarCloud.
                 </Paragraph>
             </DivContend>
         </DivPage>
