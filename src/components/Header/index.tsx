@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { FlagBrazil, IconDropdown, IconTheme } from "../../assets";
-import Prop from "../../types";
+import Props from "../../types";
 import { DivContact, DivFlag, DivFunctions, DivHeader, DivLinks, FunctionTheme, ImgContact, ImgFunctions, LinkHeader, TextFunctions } from "./style";
 import { DarkMode, WhiteMode } from "../../styles";
 
-export default function Header(header: Prop) {
+export default function Header(header: Props) {
     const changeTheme = () => {
         if (localStorage.getItem("theme") === "default") {
             localStorage.setItem("theme", "dark-mode");

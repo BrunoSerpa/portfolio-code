@@ -1,9 +1,9 @@
 import { Me } from '../../assets';
 import { DivContend, DivHeader, DivPage, LinkHeader, NavHeader, Paragraph, Title } from '../../styles';
-import Prop from '../../types';
+import Props from '../../types';
 import { Download, ProfileImg } from './style';
 
-export default function Home(home: Prop) {
+export default function Home(home: Readonly<Props>) {
     return (
         <DivPage>
             <DivHeader theme={home.data.theme}>

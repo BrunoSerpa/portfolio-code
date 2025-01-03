@@ -1,6 +1,6 @@
 import { ITheme } from "../styles";
 
-export default interface Prop {
+export default interface Props {
   data: {
     theme: ITheme;
   };
