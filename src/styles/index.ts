@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Poppins');
 
   body {
-    background-color: ${WhiteMode.backgroundColor1};
+    background-color: ${(props) => props.theme.backgroundColor1};
     font-family: 'Open Sans', 'Poppins';
     max-width: 100vw;
     min-height: 100vh;
@@ -27,7 +27,7 @@ const DivContend = styled.div`
   padding: 0 50px 20px 50px;
 `;
 const DivHeader = styled.div`
-  border-bottom: ${WhiteMode.backgroundColor3} solid 1px;
+  border-bottom: ${(props) => props.theme.backgroundColor3} solid 1px;
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
@@ -48,18 +48,18 @@ const DivPage = styled.div`
   gap: 30px;
 `;
 const LinkHeader = styled.a`
-  color: ${WhiteMode.textColor1};
+  color: ${(props) => props.theme.textColor1};
   ${font1};
   text-decoration: none;
 `;
 const Paragraph = styled.p`
-  color: ${WhiteMode.textColor1};
+  color: ${(props) => props.theme.textColor1};
   ${font3};
   text-align: justify;
   text-indent: 50px;
 `;
 const Title = styled.h1`
-  color: ${WhiteMode.textColor1};
+  color: ${(props) => props.theme.textColor1};
   ${font6};
   text-align: center;
 `;

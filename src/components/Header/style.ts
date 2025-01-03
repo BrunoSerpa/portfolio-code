@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { font2, WhiteMode } from "../../styles";
+import { font2 } from "../../styles";
 
 const DivContact = styled.a`
     align-items: center;
@@ -19,6 +19,13 @@ const DivFunctions = styled.div`
     justify-content: space-between;
     padding-right: 20px;
 `;
+const DivHeader = styled.div`
+    align-items: center;
+    background-color: ${(props) => props.theme.backgroundColor3};
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+`;
 const DivLinks = styled.div`   
     display: flex;
     flex-wrap: wrap;
@@ -27,12 +34,8 @@ const DivLinks = styled.div`
     justify-content: space-evenly;
     padding-left: 20px;
 `;
-const DivHeader = styled.div`
-    align-items: center;
-    background-color: ${WhiteMode.backgroundColor3};
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+const FunctionTheme = styled.a`
+    cursor: pointer;
 `;
 const ImgContact = styled.img`
     height: 20px;
@@ -43,13 +46,13 @@ const ImgFunctions = styled.img`
     width: 50px;
 `;
 const LinkHeader = styled.a`
-    color: ${WhiteMode.textColor4};
-    ${font2}
+    color: ${(props) => props.theme.textColor4};
+    ${font2};
     text-decoration: none;
 `;
 const TextFunctions = styled.p`
-    color: ${WhiteMode.textColor4};
-    ${font2}
+    color: ${(props) => props.theme.textColor4};
+    ${font2};
 `;
 
-export { DivContact, DivFlag, DivFunctions, DivHeader, DivLinks, ImgContact, ImgFunctions, LinkHeader, TextFunctions };
+export { DivContact, DivFlag, DivFunctions, DivHeader, DivLinks, FunctionTheme, ImgContact, ImgFunctions, LinkHeader, TextFunctions };
