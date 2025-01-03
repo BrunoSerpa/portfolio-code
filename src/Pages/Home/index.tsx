@@ -1,13 +1,16 @@
 import { Me } from '../../assets';
-import { Download, Paragraph, DivContend, ProfileImg, Title, DivPage, DivHeader, LinkHeader } from './style'
+import { DivContend, DivHeader, DivPage, LinkHeader, NavHeader, Paragraph, Title } from '../../styles';
+import { Download, ProfileImg } from './style'
 
 export default function Home() {
     return (
         <DivPage>
             <DivHeader>
-                <LinkHeader href='#QuemSou'>Quem sou</LinkHeader>
-                <LinkHeader href='#Curriculo'>Curriculo</LinkHeader>
-                <LinkHeader href='#Portfolio'>Portfólio</LinkHeader>
+                <NavHeader>
+                    <LinkHeader href='#QuemSou'>Quem sou</LinkHeader>
+                    <LinkHeader href='#Curriculo'>Curriculo</LinkHeader>
+                    <LinkHeader href='#Portfolio'>Portfólio</LinkHeader>
+                </NavHeader>
             </DivHeader>
             <DivContend id="QuemSou">
                 <Title>Quem sou</Title>

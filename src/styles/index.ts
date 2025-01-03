@@ -1,5 +1,6 @@
-import { createGlobalStyle, css } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import ITheme, { DarkMode, WhiteMode } from "./theme";
+import { font1, font2, font3, font4, font5, font6 } from "./fonts";
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans');
@@ -19,37 +20,52 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   };
 `;
-const font1 = css`
-  font-family: 'Poppins';
-  font-size: 18px;
-  font-weight: bold;
+const DivContend = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0 50px 20px 50px;
 `;
-const font2 = css`
-  font-family: 'Poppins';
-  font-size: 20px;
-  font-weight: regular;
+const DivHeader = styled.div`
+  border-bottom: ${WhiteMode.backgroundColor3} solid 1px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: space-between;
+  padding: 15px 0;
 `;
-const font3 = css`
-  font-family: 'Open Sans';
-  font-size: 20px;
-  font-weight: regular;
+const NavHeader = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: space-between;
+  padding: 0 25px;
+  width: 100%;
 `;
-const font4 = css`
-  font-family: 'Poppins';
-  font-size: 20px;
-  font-weight: bold;
+const DivPage = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 `;
-const font5 = css`
-  font-family: 'Open Sans';
-  font-size: 25px;
-  font-weight: bold;
+const LinkHeader = styled.a`
+  color: ${WhiteMode.textColor1};
+  ${font1};
+  text-decoration: none;
 `;
-const font6 = css`
-  font-family: 'Roboto';
-  font-size: 25px;
-  font-weight: bold;
+const Paragraph = styled.p`
+  color: ${WhiteMode.textColor1};
+  ${font3};
+  text-align: justify;
+  text-indent: 50px;
+`;
+const Title = styled.h1`
+  color: ${WhiteMode.textColor1};
+  ${font6};
+  text-align: center;
 `;
 
 export default GlobalStyle;
-export { font1, font2, font3, font4, font5, font6, DarkMode, WhiteMode };
+export { font1, font2, font3, font4, font5, font6 };
+export { DarkMode, WhiteMode };
+export { DivContend, DivHeader, DivPage, LinkHeader, NavHeader, Paragraph, Title };
 export type { ITheme };
