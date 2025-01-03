@@ -4,7 +4,7 @@ import Props from "../../types";
 import { DivContact, DivFlag, DivFunctions, DivHeader, DivLinks, FunctionTheme, ImgContact, ImgFunctions, LinkHeader, TextFunctions } from "./style";
 import { DarkMode, WhiteMode } from "../../styles";
 
-export default function Header(header: Props) {
+export default function Header(header: Readonly<Props>) {
     const changeTheme = () => {
         if (localStorage.getItem("theme") === "default") {
             localStorage.setItem("theme", "dark-mode");
