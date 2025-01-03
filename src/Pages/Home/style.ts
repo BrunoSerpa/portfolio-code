@@ -24,6 +24,7 @@ const Download = styled.a`
     background-color: green;
     color: ${WhiteMode.textColor4};
     ${font5};
+    text-decoration: none;
     padding: 5px 10px;
     margin: 0 auto;
 `;

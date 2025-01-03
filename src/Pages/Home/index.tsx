@@ -24,7 +24,7 @@ export default function Home() {
             </DivContend>
             <DivContend id="Curriculo">
                 <Title>Currículo</Title>
-                <Download>Download</Download>
+                <Download href="..\..\assets\Curriculum.docx" download>Download</Download>
             </DivContend>
             <DivContend id="Portfolio">
                 <Title>Portfólio</Title>
