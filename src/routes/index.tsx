@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Props from "../types";
-import { About, Home } from "../pages";
+import { About, Experience, Home } from "../pages";
 
 export default function RoutesPage(props: Readonly<Props>) {
     return (
@@ -8,6 +8,7 @@ export default function RoutesPage(props: Readonly<Props>) {
             <Route index path="*" element={<Home {...props} />} />
             <Route path="/home" element={<Home {...props} />} />
             <Route path="/about" element={<About {...props} />} />
+            <Route path="/experience" element={<Experience {...props} />} />
         </Routes>
     );
 };
