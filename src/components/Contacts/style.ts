@@ -13,19 +13,23 @@ const DivContacts = styled.div`
     position: absolute;
     width: 100%;
 `;
-const DivContact = styled.div`
+const DivContact = styled.a`
     align-items: center;
     background-color: ${(props) => props.theme.backgroundColor2};
+    cursor: pointer;
     display: flex;
     gap: 5px;
 `;
 const LinkContacts = styled.a`
     color: ${(props) => props.theme.textColor1};
     ${font1};
+    text-decoration: underline;
+    margin-bottom: 2.5px;
 `;
 const TextContacts = styled.p`
     color: ${(props) => props.theme.textColor1};
     ${font1};
+    margin-bottom: 2.5px;
 `;
 
 export { DivContacts, DivContact, LinkContacts, TextContacts };
