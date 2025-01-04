@@ -3,9 +3,13 @@ import { font2 } from "../../styles";
 
 const DivContact = styled.a`
     align-items: center;
+    cursor: pointer;
     display: flex;
     gap: 6px;
     padding: 0 20px;
+`;
+const DivDropdown = styled.div`
+    margin-top: 8px;
 `;
 const DivFlag = styled.div`
     align-items: center;
@@ -37,14 +41,6 @@ const DivLinks = styled.div`
 const FunctionTheme = styled.a`
     cursor: pointer;
 `;
-const ImgContact = styled.img`
-    height: 20px;
-    width: 20px;
-`;
-const ImgFunctions = styled.img`
-    height: 50px;
-    width: 50px;
-`;
 const LinkHeader = styled.a`
     color: ${(props) => props.theme.textColor4};
     ${font2};
@@ -55,4 +51,4 @@ const TextFunctions = styled.p`
     ${font2};
 `;
 
-export { DivContact, DivFlag, DivFunctions, DivHeader, DivLinks, FunctionTheme, ImgContact, ImgFunctions, LinkHeader, TextFunctions };
+export { DivContact, DivDropdown, DivFlag, DivFunctions, DivHeader, DivLinks, FunctionTheme, LinkHeader, TextFunctions };

@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { FlagBrazil, IconDropdown, IconTheme } from "../../assets";
 import Props from "../../types";
-import { DivContact, DivFlag, DivFunctions, DivHeader, DivLinks, FunctionTheme, ImgContact, ImgFunctions, LinkHeader, TextFunctions } from "./style";
+import { DivContact, DivDropdown, DivFlag, DivFunctions, DivHeader, DivLinks, FunctionTheme, LinkHeader, TextFunctions } from "./style";
 import { DarkMode, WhiteMode } from "../../styles";
+import ImgSVG from "../Svg";
 
 export default function Header(header: Readonly<Props>) {
     const changeTheme = () => {
@@ -17,7 +18,7 @@ export default function Header(header: Readonly<Props>) {
 
     useEffect(() => {
         if (localStorage.getItem("theme") !== "default") header.sets.theme(DarkMode);
-    }, []);
+    }, [header.sets]);
 
     return (
         <DivHeader theme={header.data.theme}>
@@ -31,14 +32,16 @@ export default function Header(header: Readonly<Props>) {
             <DivFunctions>
                 <DivContact>
                     <TextFunctions theme={header.data.theme}>Contato</TextFunctions>
-                    <ImgContact src={IconDropdown} alt="dropdown" />
+                    <DivDropdown>
+                        <ImgSVG src={IconDropdown} height="20" width="20" path={header.data.theme.textColor4} />
+                    </DivDropdown>
                 </DivContact>
                 <DivFlag>
-                    <ImgFunctions src={FlagBrazil} alt="flag-brazil" />
+                    <ImgSVG src={FlagBrazil} height="50" width="50" />
                     <TextFunctions theme={header.data.theme}>Português</TextFunctions>
                 </DivFlag>
                 <FunctionTheme onClick={changeTheme}>
-                    <ImgFunctions src={IconTheme} alt="theme" />
+                    <ImgSVG src={IconTheme} height="50" width="50" path={header.data.theme.textColor4} />
                 </FunctionTheme>
             </DivFunctions>
         </DivHeader>
