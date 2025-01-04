@@ -19,6 +19,7 @@ const DivContact = styled.a`
     cursor: pointer;
     display: flex;
     gap: 5px;
+    margin: auto;
 `;
 const LinkContacts = styled.a`
     color: ${(props) => props.theme.textColor1};
