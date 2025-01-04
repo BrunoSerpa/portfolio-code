@@ -32,14 +32,36 @@ const DivHeader = styled.div`
     justify-content: space-between;
     width: 100%;
 `;
-const DivLinks = styled.div`   
+const DivLinks = styled.div<{ showMenu: boolean }>`
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     flex: 1;
     justify-content: space-evenly;
     padding-left: 20px;
+    @media (max-width: 940px) {
+        background-color: ${(props) => props.theme.backgroundColor3};
+        border-bottom-right-radius: 10px;
+        border-right: 2.5px solid ${(props) => props.theme.backgroundColor1};
+        border-bottom: 2.5px solid ${(props) => props.theme.backgroundColor1};
+        display: ${(props) => props.showMenu ? 'flex' : 'none'};
+        flex-direction: column;
+        padding: 25px;
+        padding-top: 55px;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    };
 `;
+const ButtonMenu = styled.a<{ showMenu: boolean }>`
+    transform: ${(props) => props.showMenu ? 'rotate(90deg)' : 'rotate(0deg)'};
+    @media (min-width: 940px) {
+        display: none;
+    }
+    cursor: pointer;
+    z-index: 2;
+`
 const FunctionTheme = styled.a`
     cursor: pointer;
 `;
@@ -53,4 +75,4 @@ const TextFunctions = styled.p<{ showContact?: boolean }>`
     ${font2};
 `;
 
-export { DivContact, DivDropdown, DivFlag, DivFunctions, DivHeader, DivLinks, FunctionTheme, LinkHeader, TextFunctions };
+export { ButtonMenu, DivContact, DivDropdown, DivFlag, DivFunctions, DivHeader, DivLinks, FunctionTheme, LinkHeader, TextFunctions };

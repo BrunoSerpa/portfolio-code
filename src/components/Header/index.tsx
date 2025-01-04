@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { FlagBrazil, IconDropdown, IconTheme } from "../../assets";
+import { FlagBrazil, IconDropdown, IconMenu, IconTheme } from "../../assets";
 import Props from "../../types";
-import { DivContact, DivDropdown, DivFlag, DivFunctions, DivHeader, DivLinks, FunctionTheme, LinkHeader, TextFunctions } from "./style";
+import { ButtonMenu, DivContact, DivDropdown, DivFlag, DivFunctions, DivHeader, DivLinks, FunctionTheme, LinkHeader, TextFunctions } from "./style";
 import { DarkMode, WhiteMode } from "../../styles";
 import ImgSVG from "../Svg";
 import Contacts from "../Contacts";
@@ -22,6 +22,7 @@ export default function Header(header: Readonly<Props>) {
     }, [header.sets]);
 
     const [showContact, setShowContact] = useState(false);
+    const [showMenu, setShowMenu] = useState(false);
 
     const toggleDropdown = () => {
         setShowContact(!showContact);
@@ -29,7 +30,10 @@ export default function Header(header: Readonly<Props>) {
     return (
         <>
             <DivHeader theme={header.data.theme}>
-                <DivLinks>
+                <ButtonMenu showMenu={showMenu} onClick={() => setShowMenu(!showMenu)}>
+                    <ImgSVG src={IconMenu} height="50" width="50" />
+                </ButtonMenu>
+                <DivLinks theme={header.data.theme} showMenu={showMenu}>
                     <LinkHeader href="/home" theme={header.data.theme}>Início</LinkHeader>
                     <LinkHeader href="/about" theme={header.data.theme}>Sobre mim</LinkHeader>
                     <LinkHeader href="/experience" theme={header.data.theme}>Experiência</LinkHeader>
