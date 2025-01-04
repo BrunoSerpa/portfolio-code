@@ -56,8 +56,8 @@ export default function About(about: Readonly<Props>) {
                     Tenho expandido continuamente meus conhecimentos e habilidades em tecnologias. Atualmente, sou proficiente nas seguintes tecnologias:
                 </Paragraph>
                 <Tecs>
-                    {hardSkills.map((tec, index) => (
-                        <Tec key={index} theme={about.data.theme}>
+                    {hardSkills.map((tec) => (
+                        <Tec key={tec.title} theme={about.data.theme}>
                             <ImageTec src={tec.src} theme={about.data.theme} alt={tec.alt} />
                             <TitleTec theme={about.data.theme}>{tec.title}</TitleTec>
                         </Tec>
@@ -70,8 +70,8 @@ export default function About(about: Readonly<Props>) {
                     Além dos estudos técnicos, também me dedico ao autoconhecimento, trabalhando continuamente no meu autocontrole emocional e psicológico. Dessa forma, tenho aprimorado as seguintes habilidades:
                 </Paragraph>
                 <Habilitys theme={about.data.theme}>
-                    {softSkill.map((skill, index) => (
-                        <Hability key={index} theme={about.data.theme}>{skill}</Hability>
+                    {softSkill.map((skill) => (
+                        <Hability key={skill} theme={about.data.theme}>{skill}</Hability>
                     ))}
                 </Habilitys>
             </DivContend>
