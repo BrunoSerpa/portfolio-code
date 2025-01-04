@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "../Pages/Home";
 import Props from "../types";
 
-export default function RoutesPage(props: Props) {
+export default function RoutesPage(props: Readonly<Props>) {
     return (
         <Routes>
             <Route index path="*" element={<Home {...props} />} />
