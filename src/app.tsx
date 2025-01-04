@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { BrowserRouter } from 'react-router-dom';
 import { Header } from "./components";
-import Home from "./Pages/Home";
 import GlobalStyle, { WhiteMode } from "./styles";
 import Props from "./types";
+import RoutesPage from "./routes";
 
 export default function App() {
   const [theme, setTheme] = useState(WhiteMode);
@@ -12,10 +13,10 @@ export default function App() {
   };
 
   return (
-    <>
+    <BrowserRouter>
       <GlobalStyle theme={theme} />
       <Header {...app} />
-      <Home {...app} />
-    </>
+      <RoutesPage {...app} />
+    </BrowserRouter>
   );
 };
