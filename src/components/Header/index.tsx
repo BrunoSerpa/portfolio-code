@@ -27,18 +27,21 @@ export default function Header(header: Readonly<Props>) {
     const toggleDropdown = () => {
         setShowContact(!showContact);
     };
+    const togleMenu = () => {
+        setShowMenu(!showMenu);
+    };
     return (
         <>
             <DivHeader theme={header.data.theme}>
-                <ButtonMenu showMenu={showMenu} onClick={() => setShowMenu(!showMenu)}>
+                <ButtonMenu showMenu={showMenu} onClick={togleMenu}>
                     <ImgSVG src={IconMenu} height="50" width="50" />
                 </ButtonMenu>
                 <DivLinks theme={header.data.theme} showMenu={showMenu}>
-                    <LinkHeader href="/home" theme={header.data.theme} onClick={() => setShowMenu(!showMenu)}>Início</LinkHeader>
-                    <LinkHeader href="/about" theme={header.data.theme} onClick={() => setShowMenu(!showMenu)}>Sobre mim</LinkHeader>
-                    <LinkHeader href="/experience" theme={header.data.theme} onClick={() => setShowMenu(!showMenu)}>Experiência</LinkHeader>
-                    <LinkHeader href="/formation" theme={header.data.theme} onClick={() => setShowMenu(!showMenu)}>Formação</LinkHeader>
-                    <LinkHeader href="/project" theme={header.data.theme} onClick={() => setShowMenu(!showMenu)}>Projetos</LinkHeader>
+                    <LinkHeader href="/home" theme={header.data.theme} onClick={togleMenu}>Início</LinkHeader>
+                    <LinkHeader href="/about" theme={header.data.theme} onClick={togleMenu}>Sobre mim</LinkHeader>
+                    <LinkHeader href="/experience" theme={header.data.theme} onClick={togleMenu}>Experiência</LinkHeader>
+                    <LinkHeader href="/formation" theme={header.data.theme} onClick={togleMenu}>Formação</LinkHeader>
+                    <LinkHeader href="/project" theme={header.data.theme} onClick={togleMenu}>Projetos</LinkHeader>
                 </DivLinks>
                 <DivFunctions>
                     <DivContact theme={header.data.theme} showContact={showContact} onClick={toggleDropdown}>
