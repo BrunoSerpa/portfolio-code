@@ -65,8 +65,8 @@ export default function About(about: Readonly<Props>) {
                 </Tecs>
             </DivContend>
             <DivContend id="Soft">
-                <Title>Soft Skills</Title>
-                <Paragraph>
+                <Title theme={about.data.theme}>Soft Skills</Title>
+                <Paragraph theme={about.data.theme}>
                     Além dos estudos técnicos, também me dedico ao autoconhecimento, trabalhando continuamente no meu autocontrole emocional e psicológico. Dessa forma, tenho aprimorado as seguintes habilidades:
                 </Paragraph>
                 <Habilitys theme={about.data.theme}>

@@ -31,8 +31,8 @@ export default function Home(home: Readonly<Props>) {
                 <Download href="..\..\assets\Curriculum.docx" download theme={home.data.theme} >Download</Download>
             </DivContend>
             <DivContend id="Portfolio">
-                <Title>Portfólio</Title>
-                <Paragraph>
+                <Title theme={home.data.theme}>Portfólio</Title>
+                <Paragraph theme={home.data.theme}>
                     Este projeto foi desenvolvido utilizando React e TypeScript, com o código hospedado no Vercel e no GitHub. Durante o processo, o projeto foi inicialmente prototipado no Figma, garantindo um planejamento visual eficiente e alinhado com os objetivos. Apliquei boas práticas de programação e técnicas adquiridas ao longo da minha formação, assegurando a qualidade e a saúde do código por meio de análises realizadas com o SonarCloud.
                 </Paragraph>
             </DivContend>

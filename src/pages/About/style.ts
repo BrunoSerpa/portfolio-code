@@ -30,7 +30,7 @@ const Tec = styled.div`
     gap: 5px;
 `;
 const TitleTec = styled.p`
-    color: ${(props) => props.theme.textColor2};
+    color: ${(props) => props.theme.textColor1};
     ${font3};
 `;
 const ImageTec = styled.img`
