@@ -1,6 +1,11 @@
 import FlagBrazil from "./FlagBrazil.svg";
-import Me from "./Me.jpg";
+import IconCopy from "./IconCopy.svg";
 import IconDropdown from "./IconDropdown.svg";
+import IconEmail from "./IconEmail.svg";
+import IconGithub from "./IconGithub.svg";
+import IconLinkedin from "./IconLinkedin.svg";
+import IconPhone from "./IconPhone.svg";
 import IconTheme from "./IconTheme.svg";
+import Me from "./Me.jpg";
 
-export { FlagBrazil, Me, IconDropdown, IconTheme };
+export { FlagBrazil, IconCopy, IconDropdown, IconEmail, IconGithub, IconLinkedin, IconPhone, IconTheme, Me };
