@@ -34,7 +34,7 @@ export default function Header(header: Readonly<Props>) {
         <>
             <DivHeader theme={header.data.theme}>
                 <ButtonMenu showMenu={showMenu} onClick={togleMenu}>
-                    <ImgSVG src={IconMenu} height="50" width="50" />
+                    <ImgSVG src={IconMenu} height="50" width="50" stroke={header.data.theme.textColor4} />
                 </ButtonMenu>
                 <DivLinks theme={header.data.theme} showMenu={showMenu}>
                     <LinkHeader href="/home" theme={header.data.theme} onClick={togleMenu}>Início</LinkHeader>

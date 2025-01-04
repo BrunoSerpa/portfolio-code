@@ -5,6 +5,7 @@ interface SvgProps {
     width: string;
     height: string;
     path?: string;
+    stroke?: string;
     fill?: string;
 }
 
@@ -13,12 +14,14 @@ export default function ImgSVG({
     height,
     width,
     path,
+    stroke,
     fill
 }: Readonly<SvgProps>) {
     return <ReactSVG src={src} beforeInjection={(svg: SVGElement) => {
         svg.setAttribute('width', width);
         svg.setAttribute('height', height);
         path && svg.querySelector('path')?.setAttribute('fill', path);
+        stroke && svg.querySelector('path')?.setAttribute('stroke', stroke);
         fill && svg.querySelector('fill')?.setAttribute('fill', fill);
     }} />;
 };
