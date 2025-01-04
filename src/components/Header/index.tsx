@@ -34,11 +34,11 @@ export default function Header(header: Readonly<Props>) {
                     <ImgSVG src={IconMenu} height="50" width="50" />
                 </ButtonMenu>
                 <DivLinks theme={header.data.theme} showMenu={showMenu}>
-                    <LinkHeader href="/home" theme={header.data.theme}>Início</LinkHeader>
-                    <LinkHeader href="/about" theme={header.data.theme}>Sobre mim</LinkHeader>
-                    <LinkHeader href="/experience" theme={header.data.theme}>Experiência</LinkHeader>
-                    <LinkHeader href="/formation" theme={header.data.theme}>Formação</LinkHeader>
-                    <LinkHeader href="/project" theme={header.data.theme}>Projetos</LinkHeader>
+                    <LinkHeader href="/home" theme={header.data.theme} onClick={() => setShowMenu(!showMenu)}>Início</LinkHeader>
+                    <LinkHeader href="/about" theme={header.data.theme} onClick={() => setShowMenu(!showMenu)}>Sobre mim</LinkHeader>
+                    <LinkHeader href="/experience" theme={header.data.theme} onClick={() => setShowMenu(!showMenu)}>Experiência</LinkHeader>
+                    <LinkHeader href="/formation" theme={header.data.theme} onClick={() => setShowMenu(!showMenu)}>Formação</LinkHeader>
+                    <LinkHeader href="/project" theme={header.data.theme} onClick={() => setShowMenu(!showMenu)}>Projetos</LinkHeader>
                 </DivLinks>
                 <DivFunctions>
                     <DivContact theme={header.data.theme} showContact={showContact} onClick={toggleDropdown}>
