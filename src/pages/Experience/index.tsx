@@ -9,7 +9,7 @@ type ExperienceItemProps = {
     experience: Readonly<Props>;
 }
 
-function ExperienceItem({ title, paragraph, time, experience }: ExperienceItemProps) {
+function ExperienceItem({ title, paragraph, time, experience }: Readonly<ExperienceItemProps>) {
     return (
         <DivExperience>
             <TitleExperience theme={experience.data.theme}>{title} ({time})</TitleExperience>
