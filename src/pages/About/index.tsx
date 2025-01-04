@@ -1,40 +1,79 @@
-import { Me } from '../../assets';
 import { DivContend, DivHeader, DivPage, LinkHeader, NavHeader, Paragraph, Title } from '../../styles';
 import Props from '../../types';
-import { Download, ProfileImg } from './style';
+import { Hability, Habilitys, ImageTec, Tec, Tecs, TitleTec } from './style';
 
-export default function About(About: Readonly<Props>) {
+export default function About(about: Readonly<Props>) {
+    const hardSkills = [
+        { src: "https://skillicons.dev/icons?i=js", alt: "Javascript", title: "Javascript" },
+        { src: "https://skillicons.dev/icons?i=py", alt: "Python", title: "Python" },
+        { src: "https://skillicons.dev/icons?i=typescript", alt: "Typescript", title: "Typescript" },
+        { src: "https://skillicons.dev/icons?i=react", alt: "React", title: "React" },
+        { src: "https://skillicons.dev/icons?i=github", alt: "Github", title: "Github" },
+        { src: "https://skillicons.dev/icons?i=vercel", alt: "Vercel", title: "Vercel" },
+        { src: "https://skillicons.dev/icons?i=git", alt: "Git", title: "Git" },
+        { src: "https://skillicons.dev/icons?i=flask", alt: "Flask", title: "Flask" },
+        { src: "https://skillicons.dev/icons?i=html", alt: "HTML", title: "HTML" },
+        { src: "https://skillicons.dev/icons?i=css", alt: "CSS", title: "CSS" },
+        { src: "https://skillicons.dev/icons?i=nodejs", alt: "Node.js", title: "Node.js" },
+        { src: "https://skillicons.dev/icons?i=java", alt: "Java", title: "Java" },
+        { src: "https://skillicons.dev/icons?i=arduino", alt: "Arduino", title: "Arduino" },
+        { src: "https://skillicons.dev/icons?i=mysql", alt: "Mysql", title: "Mysql" },
+        { src: "https://skillicons.dev/icons?i=cassandra", alt: "Cassandra", title: "Cassandra" },
+        { src: "https://skillicons.dev/icons?i=figma", alt: "Figma", title: "Figma" },
+        { src: "https://skillicons.dev/icons?i=photoshop", alt: "Photoshop", title: "Photoshop" },
+        { src: "https://skillicons.dev/icons?i=vscode", alt: "Vscode", title: "Vscode" },
+        { src: "https://skillicons.dev/icons?i=eclipse", alt: "Eclipse", title: "Eclipse" },
+        { src: "https://skillicons.dev/icons?i=express", alt: "Express", title: "Express" }
+    ];
+    const softSkill = [
+        "Organização",
+        "Pensamento criativo",
+        "Resiliência",
+        "Flexibilidade",
+        "Empatia",
+        "Colaboração",
+        "Trabalhar sob pressão",
+        "Capacidade de resolver problemas"
+    ]
     return (
         <DivPage>
-            <DivHeader theme={About.data.theme}>
-                <NavHeader theme={About.data.theme}>
-                    <LinkHeader href='#QuemSou' theme={About.data.theme}>Quem sou</LinkHeader>
-                    <LinkHeader href='#Curriculo' theme={About.data.theme}>Curriculo</LinkHeader>
-                    <LinkHeader href='#Portfolio' theme={About.data.theme}>Portfólio</LinkHeader>
+            <DivHeader theme={about.data.theme}>
+                <NavHeader theme={about.data.theme}>
+                    <LinkHeader href='#General' theme={about.data.theme}>Informações Gerais</LinkHeader>
+                    <LinkHeader href='#Hard' theme={about.data.theme}>Hard Skills</LinkHeader>
+                    <LinkHeader href='#Soft' theme={about.data.theme}>Soft Skills</LinkHeader>
                 </NavHeader>
             </DivHeader>
-            <DivContend id="QuemSou">
-                <Title theme={About.data.theme}>Quem sou</Title>
-                <ProfileImg src={Me} alt="Me" theme={About.data.theme} />
-                <Paragraph theme={About.data.theme}>
-                    Meu nome é Bruno Serpa Pereira Carvalho, tenho 19 anos e sou Técnico em Desenvolvimento de Sistemas pela Escola Técnica Estadual Professora Ilza Nascimento Pintus. Atualmente, estou cursando o Tecnólogo em Desenvolvimento de Software Multiplataforma. Minha formação acadêmica e experiência prática construíram uma base sólida em tecnologias e metodologias modernas, com foco na criação de projetos funcionais e de alto desempenho.
-                </Paragraph>
-                <Paragraph theme={About.data.theme}>
-                    Tenho experiência em uma ampla variedade de ferramentas e linguagens de programação, como Git, GitHub, Python, TypeScript, JavaScript, e frameworks como React, React Native e Express. Além disso, possuo conhecimento em bancos de dados relacionais e não relacionais, como PostgreSQL, MySQL, SQL Server, Cassandra, MongoDB e Redis, permitindo-me desenvolver sistemas robustos e adaptáveis a diferentes demandas.
-                </Paragraph>
-                <Paragraph theme={About.data.theme}>
-                    Minha meta profissional é aprimorar constantemente minhas habilidades técnicas e contribuir para o desenvolvimento de projetos inovadores que agreguem valor, otimizem processos e ofereçam soluções práticas e eficazes aos usuários.
+            <DivContend id="General">
+                <Title theme={about.data.theme}>Informações Gerais</Title>
+                <Paragraph theme={about.data.theme}>
+                    Sou Bruno Serpa Pereira Carvalho, tenho 19 anos e sou Técnico em Desenvolvimento de Sistemas. Atualmente, estou no meu último ano do curso Tecnólogo em Desenvolvimento de Software Multiplataforma.
                 </Paragraph>
             </DivContend>
-            <DivContend id="Curriculo">
-                <Title theme={About.data.theme}>Currículo</Title>
-                <Download href="..\..\assets\Curriculum.docx" download theme={About.data.theme} >Download</Download>
+            <DivContend id="Hard">
+                <Title theme={about.data.theme}>Hard Skills</Title>
+                <Paragraph theme={about.data.theme}>
+                    Tenho expandido continuamente meus conhecimentos e habilidades em tecnologias. Atualmente, sou proficiente nas seguintes tecnologias:
+                </Paragraph>
+                <Tecs>
+                    {hardSkills.map((tec, index) => (
+                        <Tec key={index} theme={about.data.theme}>
+                            <ImageTec src={tec.src} theme={about.data.theme} alt={tec.alt} />
+                            <TitleTec theme={about.data.theme}>{tec.title}</TitleTec>
+                        </Tec>
+                    ))}
+                </Tecs>
             </DivContend>
-            <DivContend id="Portfolio">
-                <Title>Portfólio</Title>
+            <DivContend id="Soft">
+                <Title>Soft Skills</Title>
                 <Paragraph>
-                    Este projeto foi desenvolvido utilizando React e TypeScript, com o código hospedado no Vercel e no GitHub. Durante o processo, o projeto foi inicialmente prototipado no Figma, garantindo um planejamento visual eficiente e alinhado com os objetivos. Apliquei boas práticas de programação e técnicas adquiridas ao longo da minha formação, assegurando a qualidade e a saúde do código por meio de análises realizadas com o SonarCloud.
+                    Além dos estudos técnicos, também me dedico ao autoconhecimento, trabalhando continuamente no meu autocontrole emocional e psicológico. Dessa forma, tenho aprimorado as seguintes habilidades:
                 </Paragraph>
+                <Habilitys theme={about.data.theme}>
+                    {softSkill.map((skill, index) => (
+                        <Hability key={index} theme={about.data.theme}>{skill}</Hability>
+                    ))}
+                </Habilitys>
             </DivContend>
         </DivPage>
     );
