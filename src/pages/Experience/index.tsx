@@ -2,21 +2,23 @@ import { DivContend, DivHeader, DivPage, LinkHeader, NavHeader, Paragraph, Title
 import Props from '../../types';
 import { DivExperience, TitleExperience } from './style';
 
-type Experience = {
+type ExperienceItemProps = {
     title: string;
     paragraph: string;
     time: string;
+    experience: Readonly<Props>;
+}
+
+function ExperienceItem({ title, paragraph, time, experience }: ExperienceItemProps) {
+    return (
+        <DivExperience>
+            <TitleExperience theme={experience.data.theme}>{title} ({time})</TitleExperience>
+            <Paragraph theme={experience.data.theme}>{paragraph}</Paragraph>
+        </DivExperience>
+    );
 }
 
 export default function Experience(experience: Readonly<Props>) {
-    function ExperienceItem({ title, paragraph, time }: Experience) {
-        return (
-            <DivExperience>
-                <TitleExperience theme={experience.data.theme}>{title} ({time})</TitleExperience>
-                <Paragraph theme={experience.data.theme}>{paragraph}</Paragraph>
-            </DivExperience>
-        );
-    }
     const works = [
         {
             title: 'Aprendiz',
@@ -42,13 +44,13 @@ export default function Experience(experience: Readonly<Props>) {
             <DivContend id="Work">
                 <Title theme={experience.data.theme}>Trabalhos</Title>
                 {works.map((work) => (
-                    <ExperienceItem key={work.title} {...work} />
+                    <ExperienceItem key={work.title} {...work} experience={experience} />
                 ))}
             </DivContend>
             <DivContend id="Experience">
                 <Title theme={experience.data.theme}>Currículo</Title>
                 {volunteering.map((volunteering) => (
-                    <ExperienceItem key={volunteering.title} {...volunteering} />
+                    <ExperienceItem key={volunteering.title} {...volunteering} experience={experience}/>
                 ))}
             </DivContend>
         </DivPage>
