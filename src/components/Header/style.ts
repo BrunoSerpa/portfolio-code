@@ -1,15 +1,17 @@
 import styled from "styled-components";
 import { font2 } from "../../styles";
 
-const DivContact = styled.a`
+const DivContact = styled.a<{ showContact: boolean }>`
     align-items: center;
     cursor: pointer;
     display: flex;
     gap: 6px;
     padding: 0 20px;
+    background-color: ${(props) => props.showContact ? props.theme.backgroundColor2 : 'transparent'};
 `;
-const DivDropdown = styled.div`
-    margin-top: 8px;
+const DivDropdown = styled.div<{ showContact: boolean }>`
+    transform: ${(props) => props.showContact ? 'rotate(180deg)' : 'rotate(0deg)'};
+    margin-top: ${(props) => props.showContact ? '0' : '8px'};
 `;
 const DivFlag = styled.div`
     align-items: center;
@@ -46,8 +48,8 @@ const LinkHeader = styled.a`
     ${font2};
     text-decoration: none;
 `;
-const TextFunctions = styled.p`
-    color: ${(props) => props.theme.textColor4};
+const TextFunctions = styled.p<{ showContact?: boolean }>`
+    color: ${(props) => props.showContact ? props.theme.textColor1 : props.theme.textColor4};
     ${font2};
 `;
 
