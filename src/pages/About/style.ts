@@ -17,25 +17,5 @@ const Hability = styled.p`
     color: ${(props) => props.theme.textColor2};
     ${font5};
 `;
-const Tecs = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-`;
-const Tec = styled.div`
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-`;
-const TitleTec = styled.p`
-    color: ${(props) => props.theme.textColor1};
-    ${font3};
-`;
-const ImageTec = styled.img`
-    height: 50px;
-    width: 50px;
-`;
 
-export { Habilitys, Hability, Tecs, Tec, TitleTec, ImageTec };
+export { Habilitys, Hability };

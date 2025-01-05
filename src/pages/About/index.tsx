@@ -1,30 +1,9 @@
+import Tech from '../../components/Tech';
 import { DivContend, DivHeader, DivPage, LinkHeader, NavHeader, Paragraph, Title } from '../../styles';
 import Props from '../../types';
-import { Hability, Habilitys, ImageTec, Tec, Tecs, TitleTec } from './style';
+import { Hability, Habilitys } from './style';
 
 export default function About(about: Readonly<Props>) {
-    const hardSkills = [
-        { src: "https://skillicons.dev/icons?i=js", alt: "Javascript", title: "Javascript" },
-        { src: "https://skillicons.dev/icons?i=py", alt: "Python", title: "Python" },
-        { src: "https://skillicons.dev/icons?i=typescript", alt: "Typescript", title: "Typescript" },
-        { src: "https://skillicons.dev/icons?i=react", alt: "React", title: "React" },
-        { src: "https://skillicons.dev/icons?i=github", alt: "Github", title: "Github" },
-        { src: "https://skillicons.dev/icons?i=vercel", alt: "Vercel", title: "Vercel" },
-        { src: "https://skillicons.dev/icons?i=git", alt: "Git", title: "Git" },
-        { src: "https://skillicons.dev/icons?i=flask", alt: "Flask", title: "Flask" },
-        { src: "https://skillicons.dev/icons?i=html", alt: "HTML", title: "HTML" },
-        { src: "https://skillicons.dev/icons?i=css", alt: "CSS", title: "CSS" },
-        { src: "https://skillicons.dev/icons?i=nodejs", alt: "Node.js", title: "Node.js" },
-        { src: "https://skillicons.dev/icons?i=java", alt: "Java", title: "Java" },
-        { src: "https://skillicons.dev/icons?i=arduino", alt: "Arduino", title: "Arduino" },
-        { src: "https://skillicons.dev/icons?i=mysql", alt: "Mysql", title: "Mysql" },
-        { src: "https://skillicons.dev/icons?i=cassandra", alt: "Cassandra", title: "Cassandra" },
-        { src: "https://skillicons.dev/icons?i=figma", alt: "Figma", title: "Figma" },
-        { src: "https://skillicons.dev/icons?i=photoshop", alt: "Photoshop", title: "Photoshop" },
-        { src: "https://skillicons.dev/icons?i=vscode", alt: "Vscode", title: "Vscode" },
-        { src: "https://skillicons.dev/icons?i=eclipse", alt: "Eclipse", title: "Eclipse" },
-        { src: "https://skillicons.dev/icons?i=express", alt: "Express", title: "Express" }
-    ];
     const softSkill = [
         "Organização",
         "Pensamento criativo",
@@ -55,14 +34,28 @@ export default function About(about: Readonly<Props>) {
                 <Paragraph theme={about.data.theme}>
                     Tenho expandido continuamente meus conhecimentos e habilidades em tecnologias. Atualmente, sou proficiente nas seguintes tecnologias:
                 </Paragraph>
-                <Tecs>
-                    {hardSkills.map((tec) => (
-                        <Tec key={tec.title} theme={about.data.theme}>
-                            <ImageTec src={tec.src} theme={about.data.theme} alt={tec.alt} />
-                            <TitleTec theme={about.data.theme}>{tec.title}</TitleTec>
-                        </Tec>
-                    ))}
-                </Tecs>
+                <Tech setting={about} selectTechs={[
+                    'Arduino',
+                    'CSS',
+                    'Cassandra',
+                    'Eclipse',
+                    'Express',
+                    'Figma',
+                    'Flask',
+                    'Git',
+                    'Github',
+                    'HTML',
+                    'Java',
+                    'Javascript',
+                    'Mysql',
+                    'Node.js',
+                    'Photoshop',
+                    'Python',
+                    'React',
+                    'Typescript',
+                    'Vercel',
+                    'Vscode'
+                ]} />
             </DivContend>
             <DivContend id="Soft">
                 <Title theme={about.data.theme}>Soft Skills</Title>
