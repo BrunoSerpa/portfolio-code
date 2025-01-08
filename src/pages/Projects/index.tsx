@@ -1,6 +1,6 @@
 import { IconAssociation, IconLight, IconPerson, IconTeam, IconTechs } from '../../assets';
 import ImgSVG from '../../components/Svg';
-import Tech, { techType } from '../../components/Tech';
+import Tech, { TechType } from '../../components/Tech';
 import { DivContend, DivHeader, DivPage, LinkHeader, NavHeader, Paragraph, Title } from '../../styles';
 import Props from '../../types';
 import { DivData, DivItemProject, DivPreview, DivProject, ImgItemMenuProject, ImgPreview, ItemListProject, ItemMenuProject, ListProject, MenuProject, TitleItemProject, TitleProject } from './style';
@@ -10,7 +10,7 @@ type ProjectItemProps = {
     time: string;
     altPreview: string;
     srcPreview: string;
-    selectTechs: techType[];
+    selectTechs: TechType[];
     descProjectVision?: string;
     descPersonalContributions?: string;
     partners?: string[];

@@ -1,20 +1,20 @@
 import Props from "../../types";
 import { DivTec, DivTecs, ImageTec, TitleTec } from "./style";
 
-export type techType = "Javascript" | "Python" | "Typescript" | "React" | "Github" | "Vercel" | "Git" | "Flask" | "HTML" | "CSS" | "Node.js" | "Java" | "Arduino" | "Mysql" | "Cassandra" | "Figma" | "Photoshop" | "Postgres" | "Vscode" | "Eclipse" | "Express";
+export type TechType = "Javascript" | "Python" | "Typescript" | "React" | "Github" | "Vercel" | "Git" | "Flask" | "HTML" | "CSS" | "Node.js" | "Java" | "Arduino" | "Mysql" | "Cassandra" | "Figma" | "Photoshop" | "Postgres" | "Vscode" | "Eclipse" | "Express";
 
-interface techItemType {
+interface TechItemType {
     src: string;
     alt: string;
-    title: techType;
+    title: TechType;
 }
 
-interface techProps {
+interface TechProps {
     setting: Props;
-    selectTechs: techType[]
+    selectTechs: TechType[]
 };
 
-const techsArray: techItemType[] = [
+const techsArray: TechItemType[] = [
     { src: "https://skillicons.dev/icons?i=js", alt: "Javascript", title: "Javascript" },
     { src: "https://skillicons.dev/icons?i=py", alt: "Python", title: "Python" },
     { src: "https://skillicons.dev/icons?i=typescript", alt: "Typescript", title: "Typescript" },
@@ -41,7 +41,7 @@ const techsArray: techItemType[] = [
 export default function Tech({
     setting,
     selectTechs
-}: techProps) {
+}: TechProps) {
     const techs = techsArray
         .filter((techItem) => selectTechs.includes(techItem.title));
     return (
