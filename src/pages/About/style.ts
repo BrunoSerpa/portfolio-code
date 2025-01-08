@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { font3, font5 } from "../../styles";
+import { font5 } from "../../styles";
 
 const Habilitys = styled.div`
     background-color: ${(props) => props.theme.backgroundColor2};
