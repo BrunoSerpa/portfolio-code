@@ -3,7 +3,7 @@ import ImgSVG from '../../components/Svg';
 import Tech, { TechType } from '../../components/Tech';
 import { DivContend, DivHeader, DivPage, LinkHeader, NavHeader, Paragraph, Title } from '../../styles';
 import Props from '../../types';
-import { DivData, DivItemProject, DivPreview, DivProject, ImgItemMenuProject, ImgPreview, ItemListProject, ItemMenuProject, ListProject, MenuProject, TitleItemProject, TitleProject } from './style';
+import { DivData, DivItemProject, DivPreview, DivProject, ImgItemMenuProject, ImgPreview, VideoPreview, ItemListProject, ItemMenuProject, ListProject, MenuProject, TitleItemProject, TitleProject } from './style';
 
 type ProjectItemProps = {
     title: string;
@@ -16,6 +16,10 @@ type ProjectItemProps = {
     partners?: string[];
     team?: string[];
 };
+
+function isVideo(src: string): boolean {
+    return /\.(mp4|webm|ogg)(\?|$)/i.test(src);
+}
 
 function ProjectItem({
     title,
@@ -32,9 +36,18 @@ function ProjectItem({
 }: Readonly<ProjectItemProps & Props>) {
     return (
         <DivProject theme={data.theme}>
-            <DivPreview >
+            <DivPreview>
                 <TitleProject theme={data.theme}>{title} ({time})</TitleProject>
-                <ImgPreview src={srcPreview} alt={altPreview} />
+                {isVideo(srcPreview) ? (
+                    <VideoPreview controls>
+                        <source src={srcPreview} type="video/mp4" />
+                        <source src={srcPreview} type="video/webm" />
+                        <source src={srcPreview} type="video/ogg" />
+                        Your browser does not support the video tag.
+                    </VideoPreview>
+                ) : (
+                    <ImgPreview src={srcPreview} alt={altPreview} />
+                )}
             </DivPreview>
             <DivData>
                 <MenuProject>
@@ -122,6 +135,37 @@ export default function Project(project: Readonly<Props>) {
                 "Katiane Soares - Scrum Team",
                 "Marcus Betti - Scrum Team",
                 "Maria Gabriela - Scrum Team",
+                "Silmara Bittencourt - Scrum Team"
+            ]
+        },
+        {
+            title: "CRTL A",
+            time: "2024-1",
+            srcPreview: "https://github-production-user-asset-6210df.s3.amazonaws.com/110677265/340157785-647cf17a-d783-4200-a996-2866f25f72ab.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250108%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250108T195051Z&X-Amz-Expires=300&X-Amz-Signature=05e584d3a9c87e3f2a13c47eac4437d4b7ed06717821ba03c827c1294fe36b9e&X-Amz-SignedHeaders=host",
+            altPreview: "MVP 3ªSprint",
+            selectTechs: [
+                "Figma",
+                "Git",
+                "Typescript",
+                "Java",
+                "Postgres",
+                "React",
+                "Spring"
+            ],
+            descProjectVision: "O projeto CRTL A foi desenvolvido com o objetivo de facilitar a gestão de ativos corporativos. A solução permite acompanhar a alocação de ativos, monitorar manutenções programadas e registrar históricos detalhados de uso e movimentação, proporcionando maior controle e eficiência na administração dos recursos da empresa.",
+            descPersonalContributions: "Atuei como membro da equipe de desenvolvimento, com foco principal no front-end. Minhas responsabilidades incluíram a criação de interfaces de usuário eficientes, responsivas e alinhadas aos princípios de design centrado no usuário, utilizando React e TypeScript. Também colaborei na integração das interfaces com as APIs desenvolvidas pela equipe back-end, garantindo a funcionalidade e usabilidade do sistema.",
+            partners: [
+                "Youtan",
+                "Faculdade de Tecnologia de São José dos Campos - Prof. Jessen Vidal"
+            ],
+            team: [
+                "Katiane Soares - Product Owner",
+                "Caique Silva - Scrum Master",
+                "Bruno Serpa - Scrum Team",
+                "Maria Gabriela - Scrum Team",
+                "Mariana Izumi - Scrum Team",
+                "Marcus Betti - Scrum Team",
+                "Rafael Nunes - Scrum Team",
                 "Silmara Bittencourt - Scrum Team"
             ]
         }

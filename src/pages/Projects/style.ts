@@ -33,6 +33,9 @@ const DivPreview = styled.div`
 const ImgPreview = styled.img`
     max-width: 100%;
 `;
+const VideoPreview = styled.video`
+    max-width: 100%;
+`;
 const MenuProject = styled.div`
     display: flex;
     flex-wrap: wrap;
@@ -63,12 +66,13 @@ const TitleItemProject = styled.h1`
 `;
 const ListProject = styled.li`
     display: flex;
-    flex-direction: column;
+    flex-direWction: column;
     gap: 5px;
 `;
 const ItemListProject = styled.li`
     color: ${(props) => props.theme.textColor1};
     ${font3};
+    list-style-type: disc;
 `;
 const TitleProject = styled.h1`
     color: ${(props) => props.theme.textColor1};
@@ -77,4 +81,4 @@ const TitleProject = styled.h1`
     padding: 10px 0;
 `;
 
-export { DivData, DivItemProject, DivProject, DivPreview, ImgPreview, ImgItemMenuProject, ItemMenuProject, ItemListProject, ListProject, TitleItemProject, TitleProject, MenuProject };
+export { DivData, DivItemProject, DivProject, DivPreview, ImgPreview, VideoPreview, ImgItemMenuProject, ItemMenuProject, ItemListProject, ListProject, TitleItemProject, TitleProject, MenuProject };
