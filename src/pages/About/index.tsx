@@ -50,6 +50,7 @@ export default function About(about: Readonly<Props>) {
                     'Mysql',
                     'Node.js',
                     'Photoshop',
+                    "Postgres",
                     'Python',
                     'React',
                     'Typescript',

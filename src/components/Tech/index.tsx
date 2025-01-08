@@ -1,7 +1,7 @@
 import Props from "../../types";
 import { DivTec, DivTecs, ImageTec, TitleTec } from "./style";
 
-type techType = "Javascript" | "Python" | "Typescript" | "React" | "Github" | "Vercel" | "Git" | "Flask" | "HTML" | "CSS" | "Node.js" | "Java" | "Arduino" | "Mysql" | "Cassandra" | "Figma" | "Photoshop" | "Vscode" | "Eclipse" | "Express";
+export type techType = "Javascript" | "Python" | "Typescript" | "React" | "Github" | "Vercel" | "Git" | "Flask" | "HTML" | "CSS" | "Node.js" | "Java" | "Arduino" | "Mysql" | "Cassandra" | "Figma" | "Photoshop" | "Postgres" | "Vscode" | "Eclipse" | "Express";
 
 interface techItemType {
     src: string;
@@ -28,6 +28,7 @@ const techsArray: techItemType[] = [
     { src: "https://skillicons.dev/icons?i=nodejs", alt: "Node.js", title: "Node.js" },
     { src: "https://skillicons.dev/icons?i=java", alt: "Java", title: "Java" },
     { src: "https://skillicons.dev/icons?i=arduino", alt: "Arduino", title: "Arduino" },
+    { src: "https://skillicons.dev/icons?i=postgres", alt: "Postgres", title: "Postgres" },
     { src: "https://skillicons.dev/icons?i=mysql", alt: "Mysql", title: "Mysql" },
     { src: "https://skillicons.dev/icons?i=cassandra", alt: "Cassandra", title: "Cassandra" },
     { src: "https://skillicons.dev/icons?i=figma", alt: "Figma", title: "Figma" },
@@ -42,9 +43,7 @@ export default function Tech({
     selectTechs
 }: techProps) {
     const techs = techsArray
-        .map((techItem) => selectTechs.includes(techItem.title) && techItem)
-        .filter((techItem): techItem is techItemType => techItem !== undefined);
-
+        .filter((techItem) => selectTechs.includes(techItem.title));
     return (
         <DivTecs>
             {techs.map((techItem) => (
