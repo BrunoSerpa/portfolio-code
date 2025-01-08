@@ -21,6 +21,7 @@ const DivProject = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 10px 0;
+    padding-bottom: 10px;
 `;
 const DivPreview = styled.div`
     min-width: 500px;
