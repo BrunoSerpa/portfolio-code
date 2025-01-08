@@ -41,7 +41,7 @@ const techsArray: TechItemType[] = [
 export default function Tech({
     setting,
     selectTechs
-}: TechProps) {
+}: Readonly<TechProps>) {
     const techs = techsArray
         .filter((techItem) => selectTechs.includes(techItem.title));
     return (
