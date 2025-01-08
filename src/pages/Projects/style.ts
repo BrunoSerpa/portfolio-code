@@ -66,7 +66,7 @@ const TitleItemProject = styled.h1`
 `;
 const ListProject = styled.li`
     display: flex;
-    flex-direWction: column;
+    flex-direction: column;
     gap: 5px;
 `;
 const ItemListProject = styled.li`
