@@ -1,7 +1,7 @@
 import Props from "../../types";
 import { DivTec, DivTecs, ImageTec, TitleTec } from "./style";
 
-export type TechType = "Javascript" | "Python" | "Typescript" | "React" | "Github" | "Vercel" | "Git" | "Flask" | "HTML" | "CSS" | "Node.js" | "Java" | "Arduino" | "Mysql" | "Cassandra" | "Figma" | "Photoshop" | "Postgres" | "Vscode" | "Eclipse" | "Express";
+export type TechType = "Javascript" | "Python" | "Typescript" | "React" | "Github" | "Vercel" | "Git" | "Flask" | "HTML" | "CSS" | "Node.js" | "Java" | "Arduino" | "Mysql" | "Cassandra" | "Figma" | "Photoshop" | "Postgres" | "Vscode" | "Eclipse" | "Express" | "Spring";
 
 interface TechItemType {
     src: string;
@@ -35,7 +35,8 @@ const techsArray: TechItemType[] = [
     { src: "https://skillicons.dev/icons?i=photoshop", alt: "Photoshop", title: "Photoshop" },
     { src: "https://skillicons.dev/icons?i=vscode", alt: "Vscode", title: "Vscode" },
     { src: "https://skillicons.dev/icons?i=eclipse", alt: "Eclipse", title: "Eclipse" },
-    { src: "https://skillicons.dev/icons?i=express", alt: "Express", title: "Express" }
+    { src: "https://skillicons.dev/icons?i=express", alt: "Express", title: "Express" },
+    { src: "https://skillicons.dev/icons?i=spring", alt: "Spring", title: "Spring" }
 ];
 
 export default function Tech({

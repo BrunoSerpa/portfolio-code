@@ -53,6 +53,7 @@ export default function About(about: Readonly<Props>) {
                     "Postgres",
                     'Python',
                     'React',
+                    'Spring',
                     'Typescript',
                     'Vercel',
                     'Vscode'
