@@ -41,23 +41,23 @@ export default function ProjectItem({
             <DivData>
                 <MenuProject>
                     {selectTechs && <ItemMenuProject theme={data.theme} href={`#${title}-Tech`}>
-                        <ImgSVG src={IconTechs} height='30' width='30' fill={data.theme.textColor1} />
+                        <ImgSVG src={IconTechs} height='30' width='30' stroke={data.theme.textColor1} />
                         {texts.technologies}
                     </ItemMenuProject>}
                     {descProjectVision && <ItemMenuProject theme={data.theme} href={`#${title}-Project-Vision`}>
-                        <ImgSVG src={IconLight} height='30' width='30' fill={data.theme.textColor1} />
+                        <ImgSVG src={IconLight} height='30' width='30' path={data.theme.textColor1} />
                         {texts.vision}
                     </ItemMenuProject>}
                     {descPersonalContributions && <ItemMenuProject theme={data.theme} href={`#${title}-Personal-Contributions`}>
-                        <ImgSVG src={IconPerson} height='30' width='30' fill={data.theme.textColor1} />
+                        <ImgSVG src={IconPerson} height='30' width='30' path={data.theme.textColor1} />
                         {texts.contributions}
                     </ItemMenuProject>}
                     {partners && <ItemMenuProject theme={data.theme} href={`#${title}-Partner`}>
-                        <ImgSVG src={IconAssociation} height='30' width='30' fill={data.theme.textColor1} />
+                        <ImgSVG src={IconAssociation} height='30' width='30' path={data.theme.textColor1} />
                         {texts.partnership}
                     </ItemMenuProject>}
                     {team && <ItemMenuProject theme={data.theme} href={`#${title}-Team`}>
-                        <ImgSVG src={IconTeam} height='30' width='30' fill={data.theme.textColor1} />
+                        <ImgSVG src={IconTeam} height='30' width='30' path={data.theme.textColor1} />
                         {texts.team}
                     </ItemMenuProject>}
                 </MenuProject>
