@@ -17,11 +17,13 @@ export default function ImgSVG({
     stroke,
     fill
 }: Readonly<SvgProps>) {
-    return <ReactSVG src={src} beforeInjection={(svg: SVGElement) => {
-        svg.setAttribute('width', width);
-        svg.setAttribute('height', height);
-        path && svg.querySelector('path')?.setAttribute('fill', path);
-        stroke && svg.querySelector('path')?.setAttribute('stroke', stroke);
-        fill && svg.querySelector('fill')?.setAttribute('fill', fill);
-    }} />;
+    return <div style={{ height: `${height}px`, width: `${width}px` }}>
+        <ReactSVG src={src} beforeInjection={(svg: SVGElement) => {
+            svg.setAttribute('width', width);
+            svg.setAttribute('height', height);
+            path && svg.querySelector('path')?.setAttribute('fill', path);
+            stroke && svg.querySelector('path')?.setAttribute('stroke', stroke);
+            fill && svg.querySelector('fill')?.setAttribute('fill', fill);
+        }} />;
+    </div>
 };
