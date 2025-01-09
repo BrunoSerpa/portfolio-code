@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FlagBrazil, FlagEUA, IconDropdown, IconMenu, IconTheme } from "../../assets";
+import { FlagBrazil, FlagUSA, IconDropdown, IconMenu, IconTheme } from "../../assets";
 import Props from "../../types";
 import { ButtonMenu, DivContact, DivDropdown, DivFlag, DivFunctions, DivHeader, DivLinks, FunctionTheme, LinkHeader, TextFunctions } from "./style";
 import { DarkMode, WhiteMode } from "../../styles";
@@ -62,7 +62,7 @@ export default function Header({ data, sets }: Readonly<Props>) {
                         </DivDropdown>
                     </DivContact>
                     <DivFlag onClick={changeLanguage}>
-                        <ImgSVG src={data.language === "PT" ? FlagBrazil : FlagEUA} height="50" width="50" />
+                        <ImgSVG src={data.language === "PT" ? FlagBrazil : FlagUSA} height="50" width="50" />
                         <TextFunctions theme={data.theme}>Português</TextFunctions>
                     </DivFlag>
                     <FunctionTheme onClick={changeTheme}>
