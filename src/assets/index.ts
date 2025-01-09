@@ -1,4 +1,5 @@
 import FlagBrazil from "./FlagBrazil.svg";
+import FlagEUA from "./FlagEUA.svg";
 import IconAssociation from "./IconAssociation.svg";
 import IconCopy from "./IconCopy.svg";
 import IconDropdown from "./IconDropdown.svg";
@@ -14,4 +15,4 @@ import IconTechs from "./IconTechs.svg";
 import IconTheme from "./IconTheme.svg";
 import Me from "./Me.jpg";
 
-export { FlagBrazil, IconCopy, IconAssociation, IconDropdown, IconEmail, IconGithub, IconLight, IconLinkedin, IconMenu, IconPerson, IconPhone, IconTeam, IconTechs, IconTheme, Me };
+export { FlagBrazil, FlagEUA, IconCopy, IconAssociation, IconDropdown, IconEmail, IconGithub, IconLight, IconLinkedin, IconMenu, IconPerson, IconPhone, IconTeam, IconTechs, IconTheme, Me };
