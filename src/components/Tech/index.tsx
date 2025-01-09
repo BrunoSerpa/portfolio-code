@@ -1,3 +1,4 @@
+import { IconTechArduino, IconTechCassandra, IconTechCss, IconTechEclipse, IconTechExpress, IconTechFigma, IconTechFlask, IconTechGit, IconTechGithub, IconTechHtml, IconTechJava, IconTechJS, IconTechMongo, IconTechMysql, IconTechNodejs, IconTechPhotoshop, IconTechPostgres, IconTechPy, IconTechReact, IconTechRedis, IconTechSpring, IconTechTS, IconTechVercel, IconTechVscode } from "../../assets";
 import Props, { TechType } from "../../types";
 import { DivTec, DivTecs, ImageTec, TitleTec } from "./style";
 
@@ -42,44 +43,44 @@ interface TechProps {
 
 const techsArray: TechItemType[] = [
     // Languages
-    { src: "https://skillicons.dev/icons?i=js", alt: "Javascript", title: "Javascript" },
-    { src: "https://skillicons.dev/icons?i=typescript", alt: "Typescript", title: "Typescript" },
-    { src: "https://skillicons.dev/icons?i=py", alt: "Python", title: "Python" },
-    { src: "https://skillicons.dev/icons?i=java", alt: "Java", title: "Java" },
-    { src: "https://skillicons.dev/icons?i=html", alt: "HTML", title: "HTML" },
-    { src: "https://skillicons.dev/icons?i=css", alt: "CSS", title: "CSS" },
+    { src: IconTechJS, alt: "Javascript", title: "Javascript" },
+    { src: IconTechTS, alt: "Typescript", title: "Typescript" },
+    { src: IconTechPy, alt: "Python", title: "Python" },
+    { src: IconTechJava, alt: "Java", title: "Java" },
+    { src: IconTechHtml, alt: "HTML", title: "HTML" },
+    { src: IconTechCss, alt: "CSS", title: "CSS" },
 
     // Relational Databases
-    { src: "https://skillicons.dev/icons?i=postgres", alt: "Postgres", title: "Postgres" },
-    { src: "https://skillicons.dev/icons?i=mysql", alt: "Mysql", title: "Mysql" },
+    { src: IconTechPostgres, alt: "Postgres", title: "Postgres" },
+    { src: IconTechMysql, alt: "Mysql", title: "Mysql" },
 
     // Non-Relational Databases
-    { src: "https://skillicons.dev/icons?i=mongo", alt: "Mongo", title: "Mongo" },
-    { src: "https://skillicons.dev/icons?i=redis", alt: "Redis", title: "Redis" },
-    { src: "https://skillicons.dev/icons?i=cassandra", alt: "Cassandra", title: "Cassandra" },
+    { src: IconTechMongo, alt: "Mongo", title: "Mongo" },
+    { src: IconTechRedis, alt: "Redis", title: "Redis" },
+    { src: IconTechCassandra, alt: "Cassandra", title: "Cassandra" },
 
     // Version Control
-    { src: "https://skillicons.dev/icons?i=git", alt: "Git", title: "Git" },
-    { src: "https://skillicons.dev/icons?i=github", alt: "Github", title: "Github" },
+    { src: IconTechGit, alt: "Git", title: "Git" },
+    { src: IconTechGithub, alt: "Github", title: "Github" },
 
     // Editors
-    { src: "https://skillicons.dev/icons?i=vscode", alt: "Vscode", title: "Vscode" },
-    { src: "https://skillicons.dev/icons?i=eclipse", alt: "Eclipse", title: "Eclipse" },
+    { src: IconTechVscode, alt: "Vscode", title: "Vscode" },
+    { src: IconTechEclipse, alt: "Eclipse", title: "Eclipse" },
 
     // Design
-    { src: "https://skillicons.dev/icons?i=figma", alt: "Figma", title: "Figma" },
-    { src: "https://skillicons.dev/icons?i=photoshop", alt: "Photoshop", title: "Photoshop" },
+    { src: IconTechFigma, alt: "Figma", title: "Figma" },
+    { src: IconTechPhotoshop, alt: "Photoshop", title: "Photoshop" },
 
     // Frameworks
-    { src: "https://skillicons.dev/icons?i=react", alt: "React", title: "React" },
-    { src: "https://skillicons.dev/icons?i=express", alt: "Express", title: "Express" },
-    { src: "https://skillicons.dev/icons?i=spring", alt: "Spring", title: "Spring" },
-    { src: "https://skillicons.dev/icons?i=flask", alt: "Flask", title: "Flask" },
+    { src: IconTechReact, alt: "React", title: "React" },
+    { src: IconTechExpress, alt: "Express", title: "Express" },
+    { src: IconTechSpring, alt: "Spring", title: "Spring" },
+    { src: IconTechFlask, alt: "Flask", title: "Flask" },
 
     // Others
-    { src: "https://skillicons.dev/icons?i=vercel", alt: "Vercel", title: "Vercel" },
-    { src: "https://skillicons.dev/icons?i=nodejs", alt: "Node.js", title: "Node.js" },
-    { src: "https://skillicons.dev/icons?i=arduino", alt: "Arduino", title: "Arduino" }
+    { src: IconTechVercel, alt: "Vercel", title: "Vercel" },
+    { src: IconTechNodejs, alt: "Node.js", title: "Node.js" },
+    { src: IconTechArduino, alt: "Arduino", title: "Arduino" }
 ];
 
 export default function Tech({
@@ -91,7 +92,7 @@ export default function Tech({
     return (
         <DivTecs>
             {techs.map((techItem) => <DivTec key={techItem.title}>
-                <ImageTec src={techItem.src} alt={techItem.alt} />
+                <ImageTec src={techItem.src} alt={techItem.alt} theme={setting.data.theme} />
                 <TitleTec theme={setting.data.theme}>{techItem.title}</TitleTec>
             </DivTec>)}
         </DivTecs>

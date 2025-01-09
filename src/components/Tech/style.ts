@@ -14,6 +14,8 @@ const DivTec = styled.div`
     gap: 5px;
 `;
 const ImageTec = styled.img`
+    border: 1px solid ${(props) => props.theme.textColor1};
+    border-radius: 10px;
     height: 50px;
     width: 50px;
 `;
