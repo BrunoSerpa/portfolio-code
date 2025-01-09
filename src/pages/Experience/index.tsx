@@ -1,58 +1,39 @@
-import { DivContend, DivHeader, DivPage, LinkHeader, NavHeader, Paragraph, Title } from '../../styles';
-import Props from '../../types';
-import { DivExperience, TitleExperience } from './style';
+import { useEffect, useState } from "react";
+import Props from "../../types";
+import { textEn, textPt, TextsExperience } from "./text";
+import { DivContend, DivHeader, DivPage, LinkHeader, NavHeader, Title } from "../../styles";
+import { ExperienceItem } from "../../components";
 
-type ExperienceItemProps = {
-    title: string;
-    paragraph: string;
-    time: string;
-    experience: Readonly<Props>;
-}
+export default function Experience({ data, sets }: Readonly<Props>) {
+    const [texts, setTexts] = useState<TextsExperience>(textPt);
 
-function ExperienceItem({ title, paragraph, time, experience }: Readonly<ExperienceItemProps>) {
-    return (
-        <DivExperience>
-            <TitleExperience theme={experience.data.theme}>{title} ({time})</TitleExperience>
-            <Paragraph theme={experience.data.theme}>{paragraph}</Paragraph>
-        </DivExperience>
-    );
-}
+    useEffect(() => {
+        if (data.language === "PT") setTexts(textPt)
+        else setTexts(textEn)
+    }, [data.language]);
 
-export default function Experience(experience: Readonly<Props>) {
-    const works = [
-        {
-            title: 'Aprendiz',
-            time: '01/12/2022 - Atual',
-            paragraph: 'Atuo na SOS ECO BIKE, localizada na Avenida Presidente Juscelino Kubitschek, 4946 - Monte Castelo, São José dos Campos - SP. Minhas atividades são focadas principalmente no atendimento ao cliente e na manutenção mecânica de bicicletas. Entre minhas responsabilidades estão garantir a satisfação dos clientes por meio de um atendimento de qualidade e realizar reparos e ajustes técnicos, assegurando o pleno funcionamento e a segurança das bicicletas.'
-        }
-    ];
-    const volunteering = [
-        {
-            title: 'Multimidia',
-            time: '01/01/2021 - Atual',
-            paragraph: 'Atuo na Igreja Evangélica Pentecostal Deus é Fiel, localizada na Rua Riachuelo, 190 - Jardim Paulista, São José dos Campos - SP. Minhas responsabilidades incluem o controle da mesa de som e do projetor, garantindo a qualidade do áudio e das apresentações visuais durante os eventos e cultos.'
-        }
-    ];
     return (
         <DivPage>
-            <DivHeader theme={experience.data.theme}>
-                <NavHeader theme={experience.data.theme}>
-                    <LinkHeader href='#Work' theme={experience.data.theme}>Trabalhos</LinkHeader>
-                    <LinkHeader href='#Volunteering' theme={experience.data.theme}>Voluntariados</LinkHeader>
+            <DivHeader theme={data.theme}>
+                <NavHeader theme={data.theme}>
+                    <LinkHeader href='#Work' theme={data.theme}>{texts.Titles.Work}</LinkHeader>
+                    <LinkHeader href='#Volunteering' theme={data.theme}>{texts.Titles.Volunteering}</LinkHeader>
                 </NavHeader>
             </DivHeader>
+
             <DivContend id="Work">
-                <Title theme={experience.data.theme}>Trabalhos</Title>
-                {works.map((work) => (
-                    <ExperienceItem key={work.title} {...work} experience={experience} />
-                ))}
+                <Title theme={data.theme}>{texts.Titles.Work}</Title>
+                {texts.Works.map((work) =>
+                    <ExperienceItem key={work.title} {...work} setting={{ data, sets }} />
+                )}
             </DivContend>
+
             <DivContend id="Experience">
-                <Title theme={experience.data.theme}>Currículo</Title>
-                {volunteering.map((volunteering) => (
-                    <ExperienceItem key={volunteering.title} {...volunteering} experience={experience}/>
-                ))}
+                <Title theme={data.theme}>{texts.Titles.Volunteering}</Title>
+                {texts.Volunteering.map((volunteering) =>
+                    <ExperienceItem key={volunteering.title} {...volunteering} setting={{ data, sets }} />
+                )}
             </DivContend>
         </DivPage>
     );
-};
+}
