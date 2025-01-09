@@ -1,14 +1,6 @@
-interface ITheme {
-    backgroundColor1: string;
-    backgroundColor2: string;
-    backgroundColor3: string;
-    textColor1: string;
-    textColor2: string;
-    textColor3: string;
-    textColor4: string;
-};
+import { Theme } from "../types";
 
-const WhiteMode: ITheme = {
+export const WhiteMode: Theme = {
     backgroundColor1: "#D8EDEE",
     backgroundColor2: "#BAD9D4",
     backgroundColor3: "#175049",
@@ -18,7 +10,7 @@ const WhiteMode: ITheme = {
     textColor4: "#DDE4E4"
 };
 
-const DarkMode: ITheme = {
+export const DarkMode: Theme = {
     backgroundColor1: "#175049",
     backgroundColor2: "#BAD9D4",
     backgroundColor3: "#D8EDEE",
@@ -27,6 +19,3 @@ const DarkMode: ITheme = {
     textColor3: "#0D201E",
     textColor4: "#182825"
 };
-
-export default ITheme;
-export { DarkMode, WhiteMode };

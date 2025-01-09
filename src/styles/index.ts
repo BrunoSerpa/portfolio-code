@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
-import ITheme, { DarkMode, WhiteMode } from "./theme";
+import { DarkMode, WhiteMode } from "./theme";
 import { font1, font2, font3, font4, font5, font6 } from "./fonts";
 
 const GlobalStyle = createGlobalStyle`
@@ -68,4 +68,3 @@ export default GlobalStyle;
 export { font1, font2, font3, font4, font5, font6 };
 export { DarkMode, WhiteMode };
 export { DivContend, DivHeader, DivPage, LinkHeader, NavHeader, Paragraph, Title };
-export type { ITheme };
