@@ -13,8 +13,9 @@ const DivDropdown = styled.div<{ showContact: boolean }>`
     transform: ${(props) => props.showContact ? 'rotate(180deg)' : 'rotate(0deg)'};
     margin-top: ${(props) => props.showContact ? '0' : '8px'};
 `;
-const DivFlag = styled.div`
+const DivFlag = styled.a`
     align-items: center;
+    cursor: pointer;
     display: flex;
     gap: 5px;
     justify-content: center;
