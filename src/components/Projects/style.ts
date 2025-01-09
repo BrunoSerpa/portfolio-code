@@ -6,10 +6,10 @@ const DivData = styled.div`
     flex:1;
     flex-direction: column;
     gap: 20px;
-    max-height: 500px
     @media (min-width: 800px) {
         min-width: 500px;
-    }
+    };
+    max-height: 500px;
     overflow-y: auto;
     padding: 0 15px 20px 15px;
 `;
