@@ -21,12 +21,12 @@ export default function Contacts(contacts: Readonly<Props>) {
             <DivContact onClick={() => handleCopy("brunospc2005@gmail.com")}>
                 <ImgSVG src={IconEmail} height="25" width="25" path={contacts.data.theme.textColor1} />
                 <TextContacts theme={contacts.data.theme}>brunospc2005@gmail.com</TextContacts>
-                <ImgSVG src={IconCopy} height="25" width="25" fill={contacts.data.theme.textColor1} />
+                <ImgSVG src={IconCopy} height="25" width="25" stroke={contacts.data.theme.textColor1} />
             </DivContact>
             <DivContact onClick={() => handleCopy("+55 (12) 98899-5893")}>
                 <ImgSVG src={IconPhone} height="25" width="25" path={contacts.data.theme.textColor1} />
                 <TextContacts theme={contacts.data.theme}>+55 (12) 98899-5893</TextContacts>
-                <ImgSVG src={IconCopy} height="25" width="25" fill={contacts.data.theme.textColor1} />
+                <ImgSVG src={IconCopy} height="25" width="25" stroke={contacts.data.theme.textColor1} />
             </DivContact>
         </DivContacts>
     );
