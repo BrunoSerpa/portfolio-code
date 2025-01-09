@@ -16,7 +16,7 @@ export const textPt: TextsProjectItem = {
 
 export const textEn: TextsProjectItem = {
     technologies: "Technologies",
-    vision: "Project Vision",
+    vision: "Project's Vision Vision",
     contributions: "Personal Contributions",
     partnership: "Partnership",
     team: "Team"
