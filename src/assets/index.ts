@@ -2,5 +2,6 @@ import { IconCopy, IconEmail, IconGithub, IconLinkedin, IconPhone } from "./Cont
 import { FlagBrazil, FlagUSA, IconDropdown, IconMenu, IconTheme } from "./Header";
 import { Me } from "./Home";
 import { IconAssociation, IconLight, IconPerson, IconTeam, IconTechs } from "./ProjectsHeader";
+import { IconTechArduino, IconTechCassandra, IconTechCss, IconTechEclipse, IconTechExpress, IconTechFigma, IconTechFlask, IconTechGit, IconTechGithub, IconTechHtml, IconTechJava, IconTechJS, IconTechMongo, IconTechMysql, IconTechNodejs, IconTechPhotoshop, IconTechPostgres, IconTechPy, IconTechReact, IconTechRedis, IconTechSpring, IconTechTS, IconTechVercel, IconTechVscode } from "./Techs";
 
-export { FlagBrazil, FlagUSA, IconCopy, IconAssociation, IconDropdown, IconEmail, IconGithub, IconLight, IconLinkedin, IconMenu, IconPerson, IconPhone, IconTeam, IconTechs, IconTheme, Me };
+export { FlagBrazil, FlagUSA, IconCopy, IconAssociation, IconDropdown, IconEmail, IconGithub, IconLight, IconLinkedin, IconMenu, IconPerson, IconPhone, IconTeam, IconTechs, IconTechArduino, IconTechCassandra, IconTechCss, IconTechEclipse, IconTechExpress, IconTechFigma, IconTechFlask, IconTechGit, IconTechGithub, IconTechHtml, IconTechJava, IconTechJS, IconTechMongo, IconTechMysql, IconTechNodejs, IconTechPhotoshop, IconTechPostgres, IconTechPy, IconTechReact, IconTechRedis, IconTechSpring, IconTechTS, IconTechVercel, IconTechVscode, IconTheme, Me };
