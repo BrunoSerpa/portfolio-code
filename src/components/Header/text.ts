@@ -20,10 +20,10 @@ export const textPt:TextsHeader = {
 
 export const textEn:TextsHeader = {
     Home: "Home",
-    About: "About",
+    About: "About me",
     Experience: "Experience",
     Formation: "Formation",
-    Project: "Projets",
+    Project: "Projects",
     Contact: "Contact",
     Language: "English"
 };
