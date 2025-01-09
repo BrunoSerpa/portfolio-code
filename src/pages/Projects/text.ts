@@ -15,7 +15,6 @@ export const textPt: TextsProject = {
         Academic: "Projetos Acadêmicos"
     },
     TCCs: [
-        
         {
             title: "Projeto Tecsus",
             time: "2024-2",
@@ -146,122 +145,43 @@ export const textEn: TextsProject = {
     },
     TCCs: [
         {
+            ...textPt.TCCs[0],
             title: "Tecsus Project",
-            time: "2024-2",
-            srcPreview: "https://github.com/equipe-javali/API_4/raw/sprint4/docs/MVP.gif",
             altPreview: "4th Semester",
-            selectTechs: [
-                "Typescript",
-                "React",
-                "Git",
-                "Arduino",
-                "Express",
-                "Postgres",
-                "Cassandra",
-                "Figma"
-            ],
             descProjectVision: "The Tecsus project aims to develop an environmental monitoring system to predict and mitigate natural disasters by generating real-time alerts. The solution uses strategically positioned sensors to collect data, which is processed by an intelligent system capable of identifying imminent risk conditions.",
             descPersonalContributions: "As a member of the development team, I primarily worked on the back-end, developing and optimizing functions in TypeScript and Express for data manipulation and database integration. Additionally, I was responsible for modeling the relational database in PostgreSQL, structuring tables, and defining relationships that ensured data integrity and scalability. I also played an active role in integrating systems for real-time data processing and supervised quality control (QA) in DevOps, validating application stability and suggesting improvements before deployment.",
             partners: [
                 "Tecsus",
                 "Faculty of Technology of São José dos Campos - Prof. Jessen Vidal"
-            ],
-            team: [
-                "Mariana Izumi - Product Owner",
-                "Rafael Nunes - Scrum Master",
-                "Bruno Serpa - Scrum Team",
-                "Katiane Soares - Scrum Team",
-                "Marcus Betti - Scrum Team",
-                "Maria Gabriela - Scrum Team",
-                "Silmara Bittencourt - Scrum Team"
             ]
         },
         {
-            title: "CRTL A",
-            time: "2024-1",
-            srcPreview: "https://private-user-images.githubusercontent.com/110677265/340157785-647cf17a-d783-4200-a996-2866f25f72ab.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzYzNjg4MzgsIm5iZiI6MTczNjM2ODUzOCwicGF0aCI6Ii8xMTA2NzcyNjUvMzQwMTU3Nzg1LTY0N2NmMTdhLWQ3ODMtNDIwMC1hOTk2LTI4NjZmMjVmNzJhYi5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMTA4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDEwOFQyMDM1MzhaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yMmY1MDYzYmMzOTA0ZjQyZGUzMmI5Yzk3MzkyOTAyNGY5N2E5NjNhYjI0ZDFiYzY0ODY4MDYyOGIxYmJhZTY4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.2wOgaKcZBm1T-3vuavkcjMSyGY5QZ_4LLGIMvEnzHtU",
+            ...textPt.TCCs[1],
             altPreview: "3rd Semester",
-            selectTechs: [
-                "Figma",
-                "Git",
-                "Typescript",
-                "Java",
-                "Postgres",
-                "React",
-                "Spring"
-            ],
             descProjectVision: "The CRTL A project was developed to facilitate corporate asset management. The solution allows tracking asset allocation, monitoring scheduled maintenance, and recording detailed usage and movement histories, providing greater control and efficiency in resource management.",
             descPersonalContributions: "I worked as a member of the development team, primarily focusing on the front-end. My responsibilities included creating efficient, responsive user interfaces aligned with user-centered design principles using React and TypeScript. I also collaborated on integrating the interfaces with the back-end APIs developed by the team, ensuring system functionality and usability.",
             partners: [
                 "Youtan",
                 "Faculty of Technology of São José dos Campos - Prof. Jessen Vidal"
-            ],
-            team: [
-                "Katiane Soares - Product Owner",
-                "Caique Silva - Scrum Master",
-                "Bruno Serpa - Scrum Team",
-                "Maria Gabriela - Scrum Team",
-                "Mariana Izumi - Scrum Team",
-                "Marcus Betti - Scrum Team",
-                "Rafael Nunes - Scrum Team",
-                "Silmara Bittencourt - Scrum Team"
             ]
         },
         {
-            title: "HERMEZ",
-            time: "2023-2",
-            srcPreview: "https://github.com/equipedevo/API_2/assets/110677265/65084c5d-fa89-4e81-9733-ca1b2576eb8a",
+            ...textPt.TCCs[2],
             altPreview: "2nd Semester",
-            selectTechs: [
-                "Figma",
-                "Git",
-                "Javascript",
-                "Mysql",
-                "React"
-            ],
             descProjectVision: "The HERMEZ project was designed to develop a robust Service Call Management system. The solution offers functionalities for planning, tracking, and controlling service calls, as well as generating detailed analytical reports to assist in strategic and operational decision-making.",
             descPersonalContributions: "As a member of the development team, I was responsible for implementing front-end functionalities using React and JavaScript to create interactive, efficient, and responsive user interfaces. I also collaborated on integrating the front-end with the back-end, ensuring efficient communication between the parts. Additionally, I worked on enhancing the user experience through creative solutions that ensured intuitive and functional navigation.",
             partners: [
                 "Faculty of Technology of São José dos Campos - Prof. Jessen Vidal"
-            ],
-            team: [
-                "Gabriel Lucena do Rosário - Product Owner",
-                "Pedro Augusto N. Silva - Scrum Master",
-                "Bruno Serpa - Scrum Team",
-                "Caique Silva - Scrum Team",
-                "Mariana Izumi - Scrum Team",
-                "Rafael Nunes - Scrum Team"
             ]
         },
         {
-            title: "CICLOVALE",
-            time: "2023-1",
-            srcPreview: "https://github.com/equipedevo/API_1/blob/main/doc/sprint/Site_final.gif?raw=true",
+            ...textPt.TCCs[4],
             altPreview: "1st Semester",
-            selectTechs: [
-                "Figma",
-                "Git",
-                "Python",
-                "Flask",
-                "HTML",
-                "CSS",
-                "Mysql"
-            ],
             descProjectVision: "CICLOVALE (Informative Center for Long COVID in the Paraíba Valley) is a platform developed to assist journalists seeking detailed and comparative information on the long-term effects of COVID-19. The solution offers easy and interactive access to public data from the Unified Health System (SUS), highlighting the impact of long COVID in the Paraíba Valley region. Unlike other initiatives, CICLOVALE prioritizes usability and interactivity in data presentation.",
             descPersonalContributions: "As Scrum Master, I facilitated agile ceremonies, promoting clear and agile communication within the team, and removing impediments that could delay project progress. I acted as a bridge between team members, assisting in technical and organizational collaboration, and kept documentation up to date to ensure clarity and alignment for all. I also played a key role in front-end development, creating modern and responsive interfaces focused on user experience.",
             partners: [
                 "Vanguarda",
                 "Faculty of Technology of São José dos Campos - Prof. Jessen Vidal"
-            ],
-            team: [
-                "Caique Silva - Product Owner",
-                "Bruno Serpa - Scrum Master",
-                "Diego José da Conceição - Scrum Team",
-                "Gabriel Lucena do Rosário - Scrum Team",
-                "Nathalia Ellen Domingos - Scrum Team",
-                "João Gabriel Alves Silva - Scrum Team",
-                "Pedro Augusto N. Silva - Scrum Team",
-                "Rafael Nunes - Scrum Team"
             ]
         }
     ],
