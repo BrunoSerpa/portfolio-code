@@ -21,6 +21,9 @@ const DivItemProject = styled.div`
 const DivProject = styled.div`
     background-color: ${(props) => props.theme.backgroundColor2};
     display: flex;
+    @media (max-width: 800px) {
+        flex-direction: column;
+    }
     flex-wrap: wrap;
     gap: 10px 0;
     padding-bottom: 10px;
