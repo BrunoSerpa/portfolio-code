@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { IconAssociation, IconLight, IconPerson, IconTeam, IconTechs } from "../../assets";
 import { Paragraph } from "../../styles";
-import Props from "../../types";
+import Props, { TechType } from "../../types";
 import ImgSVG from "../Svg";
-import Tech, { TechType } from "../Tech";
+import Tech from "../Tech";
 import { DivData, DivItemProject, DivPreview, DivProject, ImgPreview, ItemListProject, ItemMenuProject, ListProject, MenuProject, TitleItemProject, TitleProject, VideoPreview } from "./style";
 import { textEn, textPt, TextsProjectItem } from "./texts";
 
@@ -35,14 +35,6 @@ export default function ProjectItem({
     const [texts, setTexts] = useState<TextsProjectItem>(textPt);
     const isVideo = (src: string): boolean => { return /\.(mp4|webm|ogg)(\?|$)/i.test(src); }
 
-    const text = {
-        technologies: "Technologies",
-        vision: "Project Vision",
-        contributions: "Personal Contributions",
-        partnership: "Partnership",
-        team: "Team"
-    };
-
     useEffect(() => {
         if (data.language === "PT") setTexts(textPt)
         else setTexts(textEn)
@@ -62,39 +54,39 @@ export default function ProjectItem({
                 <MenuProject>
                     {selectTechs && <ItemMenuProject theme={data.theme} href={`#${title}-Tech`}>
                         <ImgSVG src={IconTechs} height='30' width='30' fill={data.theme.textColor1} />
-                        {text.technologies}
+                        {texts.technologies}
                     </ItemMenuProject>}
                     {descProjectVision && <ItemMenuProject theme={data.theme} href={`#${title}-Project-Vision`}>
                         <ImgSVG src={IconLight} height='30' width='30' fill={data.theme.textColor1} />
-                        {text.vision}
+                        {texts.vision}
                     </ItemMenuProject>}
                     {descPersonalContributions && <ItemMenuProject theme={data.theme} href={`#${title}-Personal-Contributions`}>
                         <ImgSVG src={IconPerson} height='30' width='30' fill={data.theme.textColor1} />
-                        {text.contributions}
+                        {texts.contributions}
                     </ItemMenuProject>}
                     {partners && <ItemMenuProject theme={data.theme} href={`#${title}-Partner`}>
                         <ImgSVG src={IconAssociation} height='30' width='30' fill={data.theme.textColor1} />
-                        {text.partnership}
+                        {texts.partnership}
                     </ItemMenuProject>}
                     {team && <ItemMenuProject theme={data.theme} href={`#${title}-Team`}>
                         <ImgSVG src={IconTeam} height='30' width='30' fill={data.theme.textColor1} />
-                        {text.team}
+                        {texts.team}
                     </ItemMenuProject>}
                 </MenuProject>
                 {selectTechs && <DivItemProject id={`${title}-Tech`}>
-                    <TitleItemProject theme={data.theme}>{text.technologies}</TitleItemProject>
+                    <TitleItemProject theme={data.theme}>{texts.technologies}</TitleItemProject>
                     <Tech setting={{ data, sets }} selectTechs={selectTechs} />
                 </DivItemProject>}
                 {descProjectVision && <DivItemProject id={`${title}-Project-Vision`}>
-                    <TitleItemProject theme={data.theme}>{text.vision}</TitleItemProject>
+                    <TitleItemProject theme={data.theme}>{texts.vision}</TitleItemProject>
                     <Paragraph theme={data.theme}>{descProjectVision}</Paragraph>
                 </DivItemProject>}
                 {descPersonalContributions && <DivItemProject id={`${title}-Personal-Contributions`}>
-                    <TitleItemProject theme={data.theme}>{text.contributions}</TitleItemProject>
+                    <TitleItemProject theme={data.theme}>{texts.contributions}</TitleItemProject>
                     <Paragraph theme={data.theme}>{descPersonalContributions}</Paragraph>
                 </DivItemProject>}
                 {partners && <DivItemProject id={`${title}-Partner`}>
-                    <TitleItemProject theme={data.theme}>{text.partnership}</TitleItemProject>
+                    <TitleItemProject theme={data.theme}>{texts.partnership}</TitleItemProject>
                     <ListProject>
                         {partners.map((partner) =>
                             <ItemListProject key={partner} theme={data.theme}>{partner}</ItemListProject>
@@ -102,7 +94,7 @@ export default function ProjectItem({
                     </ListProject>
                 </DivItemProject>}
                 {team && <DivItemProject id={`${title}-Team`}>
-                    <TitleItemProject theme={data.theme}>{text.team}</TitleItemProject>
+                    <TitleItemProject theme={data.theme}>{texts.team}</TitleItemProject>
                     <ListProject>
                         {team.map((member) =>
                             <ItemListProject key={member} theme={data.theme}>{member}</ItemListProject>
