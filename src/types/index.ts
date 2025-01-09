@@ -24,6 +24,18 @@ export type TechType =
     "Vercel" |
     "Vscode";
 
+export type ProjectItemType = {
+  title: string;
+  time: string;
+  altPreview: string;
+  srcPreview: string;
+  selectTechs: TechType[];
+  descProjectVision?: string;
+  descPersonalContributions?: string;
+  partners?: string[];
+  team?: string[];
+};
+
 export type Languages = "PT" | "EN";
 
 export type Theme = {

@@ -1,23 +1,11 @@
 import { useEffect, useState } from "react";
 import { IconAssociation, IconLight, IconPerson, IconTeam, IconTechs } from "../../assets";
 import { Paragraph } from "../../styles";
-import Props, { TechType } from "../../types";
+import Props, { ProjectItemType, TechType } from "../../types";
 import ImgSVG from "../Svg";
 import Tech from "../Tech";
 import { DivData, DivItemProject, DivPreview, DivProject, ImgPreview, ItemListProject, ItemMenuProject, ListProject, MenuProject, TitleItemProject, TitleProject, VideoPreview } from "./style";
 import { textEn, textPt, TextsProjectItem } from "./texts";
-
-export type ProjectItemType = {
-    title: string;
-    time: string;
-    altPreview: string;
-    srcPreview: string;
-    selectTechs: TechType[];
-    descProjectVision?: string;
-    descPersonalContributions?: string;
-    partners?: string[];
-    team?: string[];
-};
 
 export default function ProjectItem({
     title,

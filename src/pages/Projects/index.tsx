@@ -1,6 +1,6 @@
-import { ProjectItem, ProjectItemType } from '../../components';
+import { ProjectItem } from '../../components';
 import { DivContend, DivHeader, DivPage, LinkHeader, NavHeader, Title } from '../../styles';
-import Props from '../../types';
+import Props, { ProjectItemType } from '../../types';
 
 export default function Project(project: Readonly<Props>) {
     const tccs: ProjectItemType[] = [
