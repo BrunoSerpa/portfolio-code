@@ -21,8 +21,10 @@ export default function ImgSVG({
         <ReactSVG src={src} beforeInjection={(svg: SVGElement) => {
             svg.setAttribute('width', width);
             svg.setAttribute('height', height);
-            path && svg.querySelector('path')?.setAttribute('fill', path);
-            stroke && svg.querySelector('path')?.setAttribute('stroke', stroke);
+            svg.querySelectorAll('path').forEach((pathElement) => {
+                path && pathElement.setAttribute('fill', path);
+                stroke && pathElement.setAttribute('stroke', stroke);
+            });
             fill && svg.querySelector('fill')?.setAttribute('fill', fill);
         }} />
     </div>
