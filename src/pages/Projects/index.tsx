@@ -1,112 +1,9 @@
-import { IconAssociation, IconLight, IconPerson, IconTeam, IconTechs } from '../../assets';
-import ImgSVG from '../../components/Svg';
-import Tech, { TechType } from '../../components/Tech';
-import { DivContend, DivHeader, DivPage, LinkHeader, NavHeader, Paragraph, Title } from '../../styles';
+import { ProjectItem, ProjectItemType } from '../../components';
+import { DivContend, DivHeader, DivPage, LinkHeader, NavHeader, Title } from '../../styles';
 import Props from '../../types';
-import { DivData, DivItemProject, DivPreview, DivProject, ImgItemMenuProject, ImgPreview, VideoPreview, ItemListProject, ItemMenuProject, ListProject, MenuProject, TitleItemProject, TitleProject } from './style';
-
-type ProjectItemProps = {
-    title: string;
-    time: string;
-    altPreview: string;
-    srcPreview: string;
-    selectTechs: TechType[];
-    descProjectVision?: string;
-    descPersonalContributions?: string;
-    partners?: string[];
-    team?: string[];
-};
-
-function isVideo(src: string): boolean {
-    return /\.(mp4|webm|ogg)(\?|$)/i.test(src);
-}
-
-function ProjectItem({
-    title,
-    time,
-    altPreview,
-    srcPreview,
-    selectTechs,
-    data,
-    descProjectVision,
-    descPersonalContributions,
-    partners,
-    team,
-    sets
-}: Readonly<ProjectItemProps & Props>) {
-    return (
-        <DivProject theme={data.theme}>
-            <DivPreview>
-                <TitleProject theme={data.theme}>{title} ({time})</TitleProject>
-                {isVideo(srcPreview) ? (
-                    <VideoPreview controls>
-                        <source src={srcPreview} type="video/mp4" />
-                        <source src={srcPreview} type="video/webm" />
-                        <source src={srcPreview} type="video/ogg" />
-                        Your browser does not support the video tag.
-                    </VideoPreview>
-                ) : (
-                    <ImgPreview src={srcPreview} alt={altPreview} />
-                )}
-            </DivPreview>
-            <DivData>
-                <MenuProject>
-                    {selectTechs && <ItemMenuProject theme={data.theme} href={`#${title}-Tech`}>
-                        <ImgSVG src={IconTechs} height='30' width='30' fill={data.theme.textColor1} />
-                        Tecnologias
-                    </ItemMenuProject>}
-                    {descProjectVision && <ItemMenuProject theme={data.theme} href={`#${title}-Project-Vision`}>
-                        <ImgSVG src={IconLight} height='30' width='30' fill={data.theme.textColor1} />
-                        Visão do Projeto
-                    </ItemMenuProject>}
-                    {descPersonalContributions && <ItemMenuProject theme={data.theme} href={`#${title}-Personal-Contributions`}>
-                        <ImgItemMenuProject src={IconPerson} alt="Personal-Contributions" />
-                        Contribuições Pessoais
-                    </ItemMenuProject>}
-                    {partners && <ItemMenuProject theme={data.theme} href={`#${title}-Partner`}>
-                        <ImgItemMenuProject src={IconAssociation} alt="Partner" />
-                        Parceria
-                    </ItemMenuProject>}
-                    {team && <ItemMenuProject theme={data.theme} href={`#${title}-Team`}>
-                        <ImgItemMenuProject src={IconTeam} alt="Team" />
-                        Equipe
-                    </ItemMenuProject>}
-                </MenuProject>
-                {selectTechs && <DivItemProject id={`${title}-Tech`}>
-                    <TitleItemProject theme={data.theme}>Tecnologias</TitleItemProject>
-                    <Tech setting={{ data, sets }} selectTechs={selectTechs} />
-                </DivItemProject>}
-                {descProjectVision && <DivItemProject id={`${title}-Project-Vision`}>
-                    <TitleItemProject theme={data.theme}>Visão do projeto</TitleItemProject>
-                    <Paragraph theme={data.theme}>{descProjectVision}</Paragraph>
-                </DivItemProject>}
-                {descPersonalContributions && <DivItemProject id={`${title}-Personal-Contributions`}>
-                    <TitleItemProject theme={data.theme}>Contribuições pessoais</TitleItemProject>
-                    <Paragraph theme={data.theme}>{descPersonalContributions}</Paragraph>
-                </DivItemProject>}
-                {partners && <DivItemProject id={`${title}-Partner`}>
-                    <TitleItemProject theme={data.theme}>Parceria</TitleItemProject>
-                    <ListProject>
-                        {partners.map((partner) =>
-                            <ItemListProject key={partner} theme={data.theme}>{partner}</ItemListProject>
-                        )}
-                    </ListProject>
-                </DivItemProject>}
-                {team && <DivItemProject id={`${title}-Team`}>
-                    <TitleItemProject theme={data.theme}>Equipe</TitleItemProject>
-                    <ListProject>
-                        {team.map((member) =>
-                            <ItemListProject key={member} theme={data.theme}>{member}</ItemListProject>
-                        )}
-                    </ListProject>
-                </DivItemProject>}
-            </DivData>
-        </DivProject>
-    );
-}
 
 export default function Project(project: Readonly<Props>) {
-    const tccs: ProjectItemProps[] = [
+    const tccs: ProjectItemType[] = [
         {
             title: "Projeto Tecsus",
             time: "2024-2",
@@ -227,7 +124,7 @@ export default function Project(project: Readonly<Props>) {
             ]
         }
     ];
-    const academicsProject: ProjectItemProps[] = tccs;
+    const academicsProject: ProjectItemType[] = tccs;
     return (
         <DivPage>
             <DivHeader theme={project.data.theme}>
