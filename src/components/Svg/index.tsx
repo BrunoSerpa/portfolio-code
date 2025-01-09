@@ -24,6 +24,6 @@ export default function ImgSVG({
             path && svg.querySelector('path')?.setAttribute('fill', path);
             stroke && svg.querySelector('path')?.setAttribute('stroke', stroke);
             fill && svg.querySelector('fill')?.setAttribute('fill', fill);
-        }} />;
+        }} />
     </div>
 };
