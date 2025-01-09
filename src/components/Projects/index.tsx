@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { IconAssociation, IconLight, IconPerson, IconTeam, IconTechs } from "../../assets";
 import { Paragraph } from "../../styles";
-import Props, { ProjectItemType, TechType } from "../../types";
+import Props, { ProjectItemType } from "../../types";
 import ImgSVG from "../Svg";
 import Tech from "../Tech";
 import { DivData, DivItemProject, DivPreview, DivProject, ImgPreview, ItemListProject, ItemMenuProject, ListProject, MenuProject, TitleItemProject, TitleProject, VideoPreview } from "./style";
