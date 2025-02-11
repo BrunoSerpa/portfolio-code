@@ -11,6 +11,7 @@ const Download = styled.a`
 `;
 const ProfileImg = styled.img`
     border: 1px solid ${(props) => props.theme.textColor1};
+    background-color: ${(props) => props.theme.textColor1};
     height: 300px;
     margin: 0 auto;
     width: 300px;
