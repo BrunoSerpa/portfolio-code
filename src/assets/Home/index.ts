@@ -1,4 +1,4 @@
-import Me from "./Me.jpg";
+import Me from "./Me.png";
 const Curriculum = require("./Curriculum.pdf");
 
 export { Me, Curriculum };
