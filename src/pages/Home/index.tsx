@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Me } from '../../assets';
+import { Curriculum, Me } from '../../assets';
 import { DivContend, DivHeader, DivPage, LinkHeader, NavHeader, Paragraph, Title } from '../../styles';
 import Props from '../../types';
 import { Download, ProfileImg } from './style';
@@ -35,7 +35,7 @@ export default function Home({ data }: Readonly<Props>) {
 
             <DivContend id="Curriculum">
                 <Title theme={data.theme}>{texts.Titles.Curriculum}</Title>
-                <Download href="../../assets/Curriculum.docx" download theme={data.theme}>Download</Download>
+                <Download href={Curriculum} download="brunoserpa.pdf" theme={data.theme}>Download</Download>
             </DivContend>
 
             <DivContend id="Portfolio">
