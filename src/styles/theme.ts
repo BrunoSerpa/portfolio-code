@@ -3,16 +3,16 @@ import { Theme } from "../types";
 export const WhiteMode: Theme = {
     backgroundColor1: "#D8EDEE",
     backgroundColor2: "#BAD9D4",
-    backgroundColor3: "#175049",
-    textColor1: "#182825",
+    backgroundColor3: "#175094",
+    textColor1: "#182852",
     textColor2: "#0D201E",
-    textColor3: "#00332E",
+    textColor3: "#0033E2",
     textColor4: "#DDE4E4"
 };
 
 export const DarkMode: Theme = {
-    backgroundColor1: "#175049",
-    backgroundColor2: "#798C89",
+    backgroundColor1: "#175094",
+    backgroundColor2: "#798C98",
     backgroundColor3: "#D8EDEE",
     textColor1: "#D8EDEE",
     textColor2: "#CCDFE0",
