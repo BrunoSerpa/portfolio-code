@@ -55,7 +55,7 @@ export default function Header({ data, sets }: Readonly<Props>) {
                     <LinkHeader href="/home" theme={data.theme} onClick={togleMenu}>{texts.Home}</LinkHeader>
                     <LinkHeader href="/about" theme={data.theme} onClick={togleMenu}>{texts.About}</LinkHeader>
                     <LinkHeader href="/experience" theme={data.theme} onClick={togleMenu}>{texts.Experience}</LinkHeader>
-                    <LinkHeader href="/formation" theme={data.theme} onClick={togleMenu}>{texts.Formation}</LinkHeader>
+                    {/* <LinkHeader href="/formation" theme={data.theme} onClick={togleMenu}>{texts.Formation}</LinkHeader> */}
                     <LinkHeader href="/project" theme={data.theme} onClick={togleMenu}>{texts.Project}</LinkHeader>
                 </DivLinks>
                 <DivFunctions>
